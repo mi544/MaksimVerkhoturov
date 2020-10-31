@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Header from "../../components/Header";
+import { Header, Main } from "components";
 
-const ProjectsPage = () => {
+const Projects = () => {
   return (
     <>
       <Head>
@@ -11,10 +11,11 @@ const ProjectsPage = () => {
       </Head>
 
       <Header />
-
-      <h1>Projects</h1>
+      <Main>
+        <h1>Projects</h1>
+      </Main>
     </>
   );
 };
 
-export default ProjectsPage;
+export default Projects;

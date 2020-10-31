@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import Header from "../../components/Header";
+import { Header, Main } from "components";
 
-const ResourcesPage = () => {
+const Resources = () => {
   return (
     <>
       <Head>
@@ -10,10 +10,11 @@ const ResourcesPage = () => {
       </Head>
 
       <Header />
-
-      <h1>Resources</h1>
+      <Main>
+        <h1>Resources</h1>
+      </Main>
     </>
   );
 };
 
-export default ResourcesPage;
+export default Resources;

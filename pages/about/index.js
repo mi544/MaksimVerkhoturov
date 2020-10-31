@@ -1,8 +1,8 @@
 import Head from "next/head";
 
-import Header from "../../components/Header";
+import { Header, Main } from "components";
 
-const AboutPage = () => {
+const About = () => {
   return (
     <>
       <Head>
@@ -10,10 +10,11 @@ const AboutPage = () => {
       </Head>
 
       <Header />
-
-      <h1>About Me</h1>
+      <Main>
+        <h1>About Me</h1>
+      </Main>
     </>
   );
 };
 
-export default AboutPage;
+export default About;

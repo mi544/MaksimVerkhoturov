@@ -1,18 +1,19 @@
 import Head from "next/head";
 import styled from "styled-components";
 
-const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import { Header, Main, H1, H4 } from "components";
 
 const Home = () => {
   return (
     <>
       <Head>
-        <title>Title</title>
+        <title>Main Page</title>
       </Head>
-
-      <Title>My page</Title>
+      <Header />
+      <Main>
+        <H1>Software developer that is who I am and I develop things</H1>
+        <H4>This is extra text talking about who I am, not much text here though</H4>
+      </Main>
     </>
   );
 };

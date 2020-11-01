@@ -4,13 +4,16 @@ import styled from "styled-components";
 const HeaderWrapper = styled.header`
   height: 100px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 16px;
   box-sizing: border-box;
   background: grey;
-  background-image: linear-gradient(to right, grey white);
+  background-image: linear-gradient(to right, white, grey);
   border-bottom: 2px solid cyan;
 `;
 
@@ -29,11 +32,14 @@ const NavBarWrapper = styled.ul`
 const NavBarItem = styled.li`
   margin: auto 20px;
   font-size: 1.5em;
+  font-weight: 500;
 `;
 
 const HeaderTitle = styled.span`
   margin: auto auto auto 0;
   font-size: 2em;
+  font-weight: 700;
+  font-variant: small-caps;
 `;
 
 const Header = () => {

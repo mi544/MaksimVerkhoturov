@@ -3,24 +3,18 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.header`
   height: 100px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 16px;
   box-sizing: border-box;
-  background: grey;
-  background-image: linear-gradient(to right, white, grey);
+  background: #8affff;
   border-bottom: 2px solid cyan;
 `;
 
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-around;
-  margin: auto 5%;
 `;
 
 const NavBarWrapper = styled.ul`
@@ -30,9 +24,27 @@ const NavBarWrapper = styled.ul`
 `;
 
 const NavBarItem = styled.li`
-  margin: auto 20px;
+  margin: auto 5px;
+  background-color: #808080;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: 1px dashed white;
+`;
+
+const NavLink = styled.a`
+  color: #e8e8e8;
+  text-shadow: 2px 1.5px 0px black, 2px 1px 0px black;
   font-size: 1.5em;
   font-weight: 500;
+  &:link {
+    text-decoration: none;
+  }
+  /* &:visited {
+  }
+  &:hover {
+  }
+  &:active {
+  } */
 `;
 
 const HeaderTitle = styled.span`
@@ -40,6 +52,8 @@ const HeaderTitle = styled.span`
   font-size: 2em;
   font-weight: 700;
   font-variant: small-caps;
+  color: #e8e8e8;
+  text-shadow: 3px 1.5px 0px black;
 `;
 
 const Header = () => {
@@ -49,28 +63,28 @@ const Header = () => {
       <NavBar>
         <NavBarWrapper>
           <NavBarItem>
-            <Link href="/">
-              <a>Home</a>
+            <Link href="/" passHref>
+              <NavLink>Home</NavLink>
             </Link>
           </NavBarItem>
           <NavBarItem>
-            <Link href="/about">
-              <a>About</a>
+            <Link href="/about" passHref>
+              <NavLink>About</NavLink>
             </Link>
           </NavBarItem>
           <NavBarItem>
-            <Link href="/projects">
-              <a>Projects</a>
+            <Link href="/projects" passHref>
+              <NavLink>Projects</NavLink>
             </Link>
           </NavBarItem>
           <NavBarItem>
-            <Link href="/resources">
-              <a>Resources</a>
+            <Link href="/resources" passHref>
+              <NavLink>Resources</NavLink>
             </Link>
           </NavBarItem>
           <NavBarItem>
-            <Link href="#contact">
-              <a>Contact</a>
+            <Link href="#contact" passHref>
+              <NavLink>Contact</NavLink>
             </Link>
           </NavBarItem>
         </NavBarWrapper>

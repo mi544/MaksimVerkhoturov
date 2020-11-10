@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const Card = styled.section`
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: ${p => p.margin};
   height: ${p => (p.height ? p => p.height : "auto")};
   width: ${p => (p.width ? p => p.width : "auto")};

@@ -29,6 +29,7 @@ const NavBarItem = styled.li`
   border-radius: 6px;
   padding: 10px 15px;
   border: 1px dashed white;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 23%, 85% 0);
 `;
 
 const NavLink = styled.a`

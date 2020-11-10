@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Main = styled.main`
+  flex: 1 0 auto;
   margin: auto 5%;
-  min-height: 100vh;
 `;
 
 export { Main };

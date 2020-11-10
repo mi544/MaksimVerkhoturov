@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Card = styled.section`
   display: flex;
+  margin: ${p => p.margin};
   flex-direction: column;
   background-color: #fff;
   border: 3px dashed black;

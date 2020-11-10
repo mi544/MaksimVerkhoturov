@@ -3,6 +3,8 @@ import styled from "styled-components";
 const Card = styled.section`
   display: flex;
   margin: ${p => p.margin};
+  height: ${p => (p.height ? p => p.height : "auto")};
+  width: ${p => (p.width ? p => p.width : "auto")};
   flex-direction: column;
   background-color: #fff;
   border: 3px dashed black;

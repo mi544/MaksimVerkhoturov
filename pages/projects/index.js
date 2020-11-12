@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { Header, Main } from "components";
+import { Header, Main, Container, Footer } from "components";
 
 const Projects = () => {
   return (
@@ -9,11 +9,13 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-
-      <Header />
-      <Main>
-        <h1>Projects</h1>
-      </Main>
+      <Container>
+        <Header />
+        <Main>
+          <h1>Projects</h1>
+        </Main>
+        <Footer />
+      </Container>
     </>
   );
 };

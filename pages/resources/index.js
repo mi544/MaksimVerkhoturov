@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header, Main } from "components";
+import { Header, Main, Container, Footer } from "components";
 
 const Resources = () => {
   return (
@@ -8,11 +8,13 @@ const Resources = () => {
       <Head>
         <title>Resources</title>
       </Head>
-
-      <Header />
-      <Main>
-        <h1>Resources</h1>
-      </Main>
+      <Container>
+        <Header />
+        <Main>
+          <h1>Resources</h1>
+        </Main>
+        <Footer />
+      </Container>
     </>
   );
 };

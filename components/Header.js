@@ -83,11 +83,6 @@ const Header = () => {
               <NavLink>Resources</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem>
-            <Link href="#contact" passHref>
-              <NavLink>Contact</NavLink>
-            </Link>
-          </NavBarItem>
         </NavBarWrapper>
       </NavBar>
     </HeaderWrapper>

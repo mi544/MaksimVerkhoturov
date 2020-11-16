@@ -11,7 +11,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {};
+const theme = {
+  primaryColor: "#00ffff",
+  secondaryColor: "#ffffff",
+  backgroundColor: "#000000",
+  textColor: "#ffffff"
+};
 
 export default function App({ Component, pageProps }) {
   return (

@@ -5,11 +5,12 @@ import { FaLinkedin } from "react-icons/fa";
 
 const FooterWrapper = styled.footer`
   flex-shrink: 0;
-  min-height: 115px;
-  background-color: #efdfdfdf;
+  min-height: 150px;
+  background-color: ${p => p.primaryColor};
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 2px solid ${p => p.theme.primaryColor};
 `;
 
 const MarginComponent = styled.div`
@@ -17,14 +18,14 @@ const MarginComponent = styled.div`
 `;
 
 const FadeBeforeFooter = styled.div`
-  height: 20vh;
-  background: linear-gradient(to bottom, #8080801a 40%, #efdfdf80 130%);
+  height: 200px;
+  background: linear-gradient(to bottom, #000000 85%, #ffffff59 140%);
 `;
 
 const Footer = () => {
   // 3 sections (row)
   return (
-    <IconContext.Provider value={{ size: "50px" }}>
+    <IconContext.Provider value={{ size: "50px", color: "white" }}>
       <FadeBeforeFooter />
       <FooterWrapper>
         <a target="_blank" rel="noreferrer noopener" href="https://github.com/mi544">

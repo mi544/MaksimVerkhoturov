@@ -5,8 +5,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background: grey;
-  color: black;
+  background: ${p => p.theme.backgroundColor};
+  color: ${p => p.theme.textColor};
   font-family: "Poppins", sans-serif;
 `;
 

@@ -1,7 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import MediaQueriesContext from "../utils/MediaQueriesContext";
 
 const HeaderWrapper = styled.header`
@@ -86,6 +86,7 @@ const MenuButton = styled.div`
   align-items: center;
   font-size: 67px;
   line-height: 12.1px;
+  z-index: 20;
 
   & > div {
     background: white;
@@ -95,51 +96,149 @@ const MenuButton = styled.div`
   }
 `;
 
-const showNavbar = (currentWidth, router) => {
-  if (currentWidth < 870) {
-    return (
-      <MenuButton>
-        <div></div>
-        <div></div>
-      </MenuButton>
-    );
-  } else {
-    return (
-      <NavBar>
-        <NavBarWrapper>
-          <NavBarItem active={router.pathname === "/"}>
-            <Link href="/" passHref>
-              <NavLink>Home</NavLink>
-            </Link>
-          </NavBarItem>
-          <NavBarItem passHref active={router.pathname === "/about"}>
-            <Link href="/about">
-              <NavLink>About</NavLink>
-            </Link>
-          </NavBarItem>
-          <NavBarItem active={router.pathname === "/projects"}>
-            <Link href="/projects" passHref>
-              <NavLink>Projects</NavLink>
-            </Link>
-          </NavBarItem>
-          <NavBarItem active={router.pathname === "/resources"}>
-            <Link href="/resources" passHref>
-              <NavLink>Resources</NavLink>
-            </Link>
-          </NavBarItem>
-        </NavBarWrapper>
-      </NavBar>
-    );
+const mobileMenuAppear = keyframes`
+from {
+  transform: translateX(65px);
+  opacity: 0.1;
+}
+
+to {
+  transform: translateX(0px);
+  opacity: 1;
+}`;
+
+const mobileMenuDisappear = keyframes`
+from {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+to {
+  transform: translateX(65px);
+  opacity: 0;
+}`;
+
+const MobileMenuLink = styled(NavLink)`
+  font-size: 1.8em;
+`;
+
+const MobileMenu = styled.div`
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 450px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px ${p => p.theme.backgroundColor};
+  background: yellow;
+  clip-path: polygon(74% 0, 100% 0, 100% 86%, 44% 68%);
+
+  z-index: 10;
+
+  // if loaded for the first time, no animation is needed
+  // TODO change that to be triggered on initial page load (refresh in the browser, not just any component mount)
+  ${p =>
+    p.first
+      ? "none"
+      : css`
+  animation:  ${p =>
+    p.show
+      ? css`
+          ${mobileMenuAppear} 1s cubic-bezier(0, 1.09, 0.25, 1) forwards
+        `
+      : css`
+          ${mobileMenuDisappear} 0.3s cubic-bezier(0, 1.09, 0.25, 1) forwards
+        `};}
+        `}
+
+  & > ul {
+    /* font-size: 1.6em; */
+    /* font-weight: 400; */
+    /* color: black; */
+    text-align: right;
+    padding-right: 25px;
+    list-style: none;
   }
-};
+
+  & > ul > li {
+    margin: 8px 0;
+  }
+`;
 
 const Header = () => {
   const router = useRouter();
   const { height, width } = useContext(MediaQueriesContext);
+  const [menuShown, setMenuShown] = useState(false);
+  const [firstLoaded, setFirstLoaded] = useState(true);
   return (
     <HeaderWrapper>
       <HeaderTitle>Maksim Verkhoturov</HeaderTitle>
-      {showNavbar(width, router)}
+      {width < 870 ? (
+        <>
+          <MobileMenu show={menuShown} first={firstLoaded}>
+            <ul>
+              <li>
+                <Link href="/" passHref>
+                  <MobileMenuLink>Home</MobileMenuLink>
+                </Link>
+              </li>
+              <li>
+                <Link href="/about">
+                  <MobileMenuLink>About</MobileMenuLink>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects" passHref>
+                  <MobileMenuLink>Projects</MobileMenuLink>
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources" passHref>
+                  <MobileMenuLink>Resources</MobileMenuLink>
+                </Link>
+              </li>
+            </ul>
+          </MobileMenu>
+          <MenuButton
+            onClick={() => {
+              setMenuShown(s => !s);
+              setFirstLoaded(false);
+            }}
+          >
+            <div></div>
+            <div></div>
+          </MenuButton>
+        </>
+      ) : (
+        <NavBar>
+          <NavBarWrapper>
+            <NavBarItem active={router.pathname === "/"}>
+              <Link href="/" passHref>
+                <NavLink>Home</NavLink>
+              </Link>
+            </NavBarItem>
+            <NavBarItem passHref active={router.pathname === "/about"}>
+              <Link href="/about">
+                <NavLink>About</NavLink>
+              </Link>
+            </NavBarItem>
+            <NavBarItem active={router.pathname === "/projects"}>
+              <Link href="/projects" passHref>
+                <NavLink>Projects</NavLink>
+              </Link>
+            </NavBarItem>
+            <NavBarItem active={router.pathname === "/resources"}>
+              <Link href="/resources" passHref>
+                <NavLink>Resources</NavLink>
+              </Link>
+            </NavBarItem>
+          </NavBarWrapper>
+        </NavBar>
+      )}
     </HeaderWrapper>
   );
 };

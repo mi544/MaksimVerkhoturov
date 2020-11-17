@@ -1,4 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+
+const appear = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const isAnimated = (p, appear) => {
+  if (p.appearDuration) {
+    return css`
+      animation: ${appear} ${p.appearDuration}s forwards;
+    `;
+  } else {
+    return `animation: none;`;
+  }
+};
 
 const Card = styled.section`
   display: flex;
@@ -16,16 +36,7 @@ const Card = styled.section`
 
   transform: translateY(25px);
   // only appear once when the page is loaded the first time
-  animation: ${p => (p.appear ? "appear " + p.appear + "s forwards" : "none")};
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  ${p => isAnimated(p, appear)}
 `;
 
 export { Card };

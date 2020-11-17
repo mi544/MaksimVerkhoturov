@@ -63,6 +63,10 @@ const HeaderTitle = styled.span`
   font-variant: small-caps;
   color: #e8e8e8;
   text-shadow: 3px 1.5px 0px black;
+
+  @media (max-width: 451px) {
+    width: 80%;
+  }
 `;
 
 const MenuButton = styled.div`
@@ -91,15 +95,16 @@ const MenuButton = styled.div`
   }
 `;
 
-const Header = () => {
-  const router = useRouter();
-  const { height, width } = useContext(MediaQueriesContext);
-  console.log("render");
-  return (
-    <HeaderWrapper>
-      <HeaderTitle>
-        Maksim Verkhoturov{height}x{width}
-      </HeaderTitle>
+const showNavbar = (currentWidth, router) => {
+  if (currentWidth < 870) {
+    return (
+      <MenuButton>
+        <div></div>
+        <div></div>
+      </MenuButton>
+    );
+  } else {
+    return (
       <NavBar>
         <NavBarWrapper>
           <NavBarItem active={router.pathname === "/"}>
@@ -124,10 +129,17 @@ const Header = () => {
           </NavBarItem>
         </NavBarWrapper>
       </NavBar>
-      {/* <MenuButton>
-        <div></div>
-        <div></div>
-      </MenuButton> */}
+    );
+  }
+};
+
+const Header = () => {
+  const router = useRouter();
+  const { height, width } = useContext(MediaQueriesContext);
+  return (
+    <HeaderWrapper>
+      <HeaderTitle>Maksim Verkhoturov</HeaderTitle>
+      {showNavbar(width, router)}
     </HeaderWrapper>
   );
 };

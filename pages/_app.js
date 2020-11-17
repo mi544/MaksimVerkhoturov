@@ -1,4 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import MediaQueriesContext from "../utils/MediaQueriesContext";
+import useWindowDimensions from "../utils/hooks/useWindowDimensions";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -19,12 +21,15 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
+  const dimensions = useWindowDimensions();
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <MediaQueriesContext.Provider value={dimensions}>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </MediaQueriesContext.Provider>
     </>
   );
 }

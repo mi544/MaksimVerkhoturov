@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import MediaQueriesContext from "../utils/MediaQueriesContext";
 
 const HeaderWrapper = styled.header`
   height: 100px;
@@ -63,13 +65,41 @@ const HeaderTitle = styled.span`
   text-shadow: 3px 1.5px 0px black;
 `;
 
+const MenuButton = styled.div`
+  flex-direction: column;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 50%, -27% 0);
+  border-radius: 15%;
+  height: 50px;
+  width: 50px;
+  background: #000000;
+  box-shadow: inset 2px -3px 0px 0px #fff;
+  position: fixed;
+  border: solid 2px white;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 67px;
+  line-height: 12.1px;
+
+  & > div {
+    background: white;
+    width: 26px;
+    height: 5px;
+    margin: 6px 6px 0 4px;
+  }
+`;
+
 const Header = () => {
   const router = useRouter();
-  console.log(router.pathname);
-  console.log(router.pathname === "/");
+  const { height, width } = useContext(MediaQueriesContext);
+  console.log("render");
   return (
     <HeaderWrapper>
-      <HeaderTitle>Maksim Verkhoturov</HeaderTitle>
+      <HeaderTitle>
+        Maksim Verkhoturov{height}x{width}
+      </HeaderTitle>
       <NavBar>
         <NavBarWrapper>
           <NavBarItem active={router.pathname === "/"}>
@@ -94,6 +124,10 @@ const Header = () => {
           </NavBarItem>
         </NavBarWrapper>
       </NavBar>
+      {/* <MenuButton>
+        <div></div>
+        <div></div>
+      </MenuButton> */}
     </HeaderWrapper>
   );
 };

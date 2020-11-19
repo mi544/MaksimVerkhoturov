@@ -3,10 +3,16 @@ import MediaQueriesContext from "utils/MediaQueriesContext";
 import useWindowDimensions from "utils/hooks/useWindowDimensions";
 
 const GlobalStyle = createGlobalStyle`
-  *{
+  * {
     margin: 0;
     padding: 0;
   }
+
+  &::selection{
+    color: ${p => p.theme.textColor};
+    background:${p => p.theme.accentColor}
+  }
+
   a {
     color: black;
     text-decoration: none
@@ -27,9 +33,9 @@ export default function App({ Component, pageProps }) {
   const dimensions = useWindowDimensions();
   return (
     <>
-      <GlobalStyle />
       <MediaQueriesContext.Provider value={dimensions}>
         <ThemeProvider theme={theme}>
+          <GlobalStyle />
           <Component {...pageProps} />
         </ThemeProvider>
       </MediaQueriesContext.Provider>

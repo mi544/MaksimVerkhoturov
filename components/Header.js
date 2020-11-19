@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import SMLCheck from "utils/hooks/SmallMediumLargeCheck";
 import styled, { keyframes, css } from "styled-components";
-import MediaQueriesContext from "../utils/MediaQueriesContext";
+import MediaQueriesContext from "utils/MediaQueriesContext";
 
 const HeaderWrapper = styled.header`
   height: 100px;
@@ -28,13 +29,14 @@ const NavBarWrapper = styled.ul`
 
 const NavBarItem = styled.li`
   margin: auto 5px;
-  background-color: ${p => (p.active ? p.theme.secondaryColor : p.theme.secondaryColor)};
-  box-shadow: ${p => (p.active ? "inset -4px -6px #000000" : "none")};
+  background-color: ${p => p.theme.secondaryColor};
+  box-shadow: ${p => (p.active ? `inset -4px -6px ${p.theme.backgroundColor}` : "none")};
   border-radius: 6px;
   padding: 10px 15px;
   border: 1px solid white;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 23%, 85% 0);
   transition: 0.2s;
+  user-select: none;
   &:hover {
     transform: scale(1.05, 1.05);
   }
@@ -61,7 +63,7 @@ const HeaderTitle = styled.span`
   font-size: 2em;
   font-weight: 700;
   font-variant: small-caps;
-  color: #e8e8e8;
+  color: ${p => p.theme.secondaryTextColor};
   text-shadow: 3px 1.5px 0px black;
 
   @media (max-width: 451px) {
@@ -75,8 +77,8 @@ const MenuButton = styled.div`
   border-radius: 15%;
   height: 50px;
   width: 50px;
-  background: #000000;
-  box-shadow: inset 2px -3px 0px 0px #fff;
+  background: ${p => p.theme.backgroundColor};
+  box-shadow: inset 2px -3px 0px 0px ${p => p.theme.secondaryAccentColor};
   position: fixed;
   border: solid 2px white;
   top: 20px;
@@ -171,13 +173,14 @@ const MobileMenu = styled.div`
 
 const Header = () => {
   const router = useRouter();
+
   const { height, width } = useContext(MediaQueriesContext);
   const [menuShown, setMenuShown] = useState(false);
   const [firstLoaded, setFirstLoaded] = useState(true);
   return (
     <HeaderWrapper>
       <HeaderTitle>Maksim Verkhoturov</HeaderTitle>
-      {width < 870 ? (
+      {SMLCheck(
         <>
           <MobileMenu show={menuShown} first={firstLoaded}>
             <ul>
@@ -212,8 +215,7 @@ const Header = () => {
             <div></div>
             <div></div>
           </MenuButton>
-        </>
-      ) : (
+        </>,
         <NavBar>
           <NavBarWrapper>
             <NavBarItem active={router.pathname === "/"}>

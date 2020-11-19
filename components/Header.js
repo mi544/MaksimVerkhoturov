@@ -145,17 +145,20 @@ const MobileMenu = styled.div`
   // TODO change that to be triggered on initial page load (refresh in the browser, not just any component mount)
   ${p =>
     p.first
-      ? "none"
+      ? ""
       : css`
-  animation:  ${p =>
-    p.show
-      ? css`
-          ${mobileMenuAppear} 1s cubic-bezier(0, 1.09, 0.25, 1) forwards
-        `
-      : css`
-          ${mobileMenuDisappear} 0.3s cubic-bezier(0, 1.09, 0.25, 1) forwards
-        `};}
+    ${
+      p.show
+        ? css`
+            animation: ${mobileMenuAppear} 1s cubic-bezier(0, 1.09, 0.25, 1) forwards;
+          `
+        : css`
+            animation: ${mobileMenuDisappear} 0.3s cubic-bezier(0, 1.09, 0.25, 1) forwards;
+          `
+    };}
         `}
+
+  pointer-events: ${p => (p.show ? "auto" : "none")};
 
   & > ul {
     /* font-size: 1.6em; */

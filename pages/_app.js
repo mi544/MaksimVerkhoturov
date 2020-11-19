@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import MediaQueriesContext from "../utils/MediaQueriesContext";
-import useWindowDimensions from "../utils/hooks/useWindowDimensions";
+import MediaQueriesContext from "utils/MediaQueriesContext";
+import useWindowDimensions from "utils/hooks/useWindowDimensions";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -16,8 +16,11 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
   primaryColor: "#00ffff",
   secondaryColor: "#ffffff",
+  accentColor: "#00ffff",
+  secondaryAccentColor: "#ffffff",
   backgroundColor: "#000000",
-  textColor: "#ffffff"
+  textColor: "#ffffff",
+  secondaryTextColor: "#e8e8e8"
 };
 
 export default function App({ Component, pageProps }) {

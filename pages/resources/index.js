@@ -1,19 +1,22 @@
 import Head from "next/head";
 
-import Header from "../../components/Header";
+import { Header, Main, Container, Footer } from "components";
 
-const ResourcesPage = () => {
+const Resources = () => {
   return (
     <>
       <Head>
         <title>Resources</title>
       </Head>
-
-      <Header />
-
-      <h1>Resources</h1>
+      <Container>
+        <Header />
+        <Main>
+          <h1>Resources</h1>
+        </Main>
+        <Footer />
+      </Container>
     </>
   );
 };
 
-export default ResourcesPage;
+export default Resources;

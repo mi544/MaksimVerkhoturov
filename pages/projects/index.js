@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import SMLCheck from "utils/hooks/SmallMediumLargeCheck";
 
 import {
   Header,
@@ -24,10 +23,17 @@ const Projects = () => {
         <Header />
         <Main>
           <Row center>
-            <BorderlessCard
-              column={SMLCheck(true, false)}
-              width={SMLCheck("90%", "90%", "90%")}
-            >
+            <BorderlessCard width="90%">
+              <div>
+                <Image
+                  src="/images/tortoise-mobile.png"
+                  alt="tortoise"
+                  width={600}
+                  height={600}
+                  layout="intrinsic"
+                  quality={100}
+                />
+              </div>
               <div>
                 <GlitchingTitle>
                   <H1>Mood Music</H1>
@@ -47,16 +53,6 @@ const Projects = () => {
                     の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
                   </p>
                 </article>
-              </div>
-              <div>
-                <Image
-                  src="/images/tortoise-mobile.png"
-                  alt="tortoise"
-                  width={600}
-                  height={600}
-                  layout="intrinsic"
-                  quality={100}
-                />
               </div>
             </BorderlessCard>
           </Row>

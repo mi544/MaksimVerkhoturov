@@ -26,7 +26,7 @@ const Card = styled.section`
   align-items: center;
   margin: ${p => p.margin};
   height: ${p => (p.height ? p => p.height : "auto")};
-  width: ${p => (p.width ? p => p.width : "auto")};
+  width: ${p => (p ? p.width[0] : "auto")};
   flex-direction: column;
   background-color: #ffffff00;
   border: 3px solid white;
@@ -37,6 +37,13 @@ const Card = styled.section`
   transform: translateY(25px);
   // only appear once when the page is loaded the first time
   ${p => isAnimated(p, appear)}
+
+  @media (min-width: 870px) {
+    width: ${p => (p ? p.width[1] : "auto")};
+  }
+  @media (min-width: 1215px) {
+    width: ${p => (p ? p.width[2] : "auto")};
+  }
 `;
 
 export { Card };

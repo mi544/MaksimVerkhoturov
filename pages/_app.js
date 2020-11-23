@@ -1,6 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import MediaQueriesContext from "utils/MediaQueriesContext";
-import useWindowDimensions from "utils/hooks/useWindowDimensions";
+import Head from "next/head";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -30,15 +29,19 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
-  const dimensions = useWindowDimensions();
   return (
     <>
-      <MediaQueriesContext.Provider value={dimensions}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </MediaQueriesContext.Provider>
+      <Head>
+        {/* Use minimum-scale=1 to enable GPU rasterization */}
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

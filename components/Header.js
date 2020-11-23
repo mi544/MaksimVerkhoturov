@@ -175,6 +175,7 @@ const NavBar = styled.div`
     background: none;
     clip-path: none;
     animation: none;
+    pointer-events: auto;
   }
 `;
 

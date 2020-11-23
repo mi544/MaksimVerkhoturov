@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
         {/* Use minimum-scale=1 to enable GPU rasterization */}
         <meta
           name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"
         />
       </Head>
       <ThemeProvider theme={theme}>

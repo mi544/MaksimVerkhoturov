@@ -11,12 +11,6 @@ const GlitchingTitle = styled.div`
     opacity: 0.2;
   }
 
-  & > *:last-child {
-    line-height: 25px;
-    opacity: 0.2;
-    color: ${p => p.theme.accentColor};
-  }
-
   & > *:nth-child(2) {
     line-height: 10px;
     opacity: 0.8;
@@ -26,6 +20,12 @@ const GlitchingTitle = styled.div`
   & > *:nth-child(3) {
     line-height: 40px;
     z-index: 20;
+  }
+
+  & > *:nth-child(4) {
+    line-height: 25px;
+    opacity: 0.2;
+    color: ${p => p.theme.accentColor};
   }
 `;
 

@@ -25,16 +25,6 @@ const Projects = () => {
           <Row center>
             <BorderlessCard width="90%">
               <div>
-                <Image
-                  src="/images/tortoise-mobile.png"
-                  alt="tortoise"
-                  width={600}
-                  height={600}
-                  layout="intrinsic"
-                  quality={100}
-                />
-              </div>
-              <div>
                 <GlitchingTitle>
                   <H1>Mood Music</H1>
                   <H1>Mood Music</H1>
@@ -53,6 +43,51 @@ const Projects = () => {
                     の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
                   </p>
                 </article>
+              </div>
+              <div>
+                <Image
+                  src="/images/tortoise-mobile.png"
+                  alt="tortoise"
+                  width={600}
+                  height={600}
+                  layout="intrinsic"
+                  quality={100}
+                />
+              </div>
+            </BorderlessCard>
+          </Row>
+          <Row center>
+            <BorderlessCard width="90%" reversed>
+              <div>
+                <GlitchingTitle>
+                  <H1>Interplanetary</H1>
+                  <H1>Interplanetary</H1>
+                  <H1>Interplanetary</H1>
+                  <H1 />
+                  <H1>Travel</H1>
+                </GlitchingTitle>
+
+                <article>
+                  <p>
+                    最近、よく耳にする『糖質制限』なる言葉。大豆粉を購入したので、おからパウダーと合わせ、買い置きのココナッツも加えてホットケーキ（パンケーキ）を焼いてみることにしました。
+                  </p>
+                  <p>
+                    牛乳→水にする時はバターと黒蜜だけでも美味しいですがトッピングは栗や生クリームなども♫お好きな和風を楽しんで下さい^o^
+                  </p>
+                  <p>
+                    の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
+                  </p>
+                </article>
+              </div>
+              <div>
+                <Image
+                  src="/images/rocket-mobile.png"
+                  alt="rocket"
+                  width={600}
+                  height={600}
+                  layout="intrinsic"
+                  quality={100}
+                />
               </div>
             </BorderlessCard>
           </Row>

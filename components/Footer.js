@@ -18,7 +18,7 @@ const MarginComponent = styled.div`
 `;
 
 const FadeBeforeFooter = styled.div`
-  height: 200px;
+  height: 12vh;
   background: linear-gradient(to bottom, #000000 85%, #ffffff59 140%);
 `;
 

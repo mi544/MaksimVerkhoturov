@@ -189,22 +189,22 @@ const Header = () => {
 
       <NavBar show={menuShown} first={firstLoaded}>
         <NavBarWrapper>
-          <NavBarItem>
+          <NavBarItem active={router.pathname === "/"}>
             <Link href="/" passHref>
               <NavLink>Home</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem>
-            <Link href="/about">
+          <NavBarItem active={router.pathname === "/about"}>
+            <Link href="/about" passHref>
               <NavLink>About</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem>
+          <NavBarItem active={router.pathname === "/projects"}>
             <Link href="/projects" passHref>
               <NavLink>Projects</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem>
+          <NavBarItem active={router.pathname === "/resources"}>
             <Link href="/resources" passHref>
               <NavLink>Resources</NavLink>
             </Link>

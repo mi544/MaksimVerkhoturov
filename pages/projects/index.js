@@ -23,9 +23,9 @@ const Projects = () => {
         <Header />
         <Main>
           <Row center>
-            <BorderlessCard width="90%">
+            <BorderlessCard width="90%" margin="30px auto auto auto">
               <div>
-                <GlitchingTitle>
+                <GlitchingTitle margin="2px auto 20px auto">
                   <H1>Mood Music</H1>
                   <H1>Mood Music</H1>
                   <H1>Mood Music</H1>
@@ -57,9 +57,9 @@ const Projects = () => {
             </BorderlessCard>
           </Row>
           <Row center>
-            <BorderlessCard width="90%" reversed>
+            <BorderlessCard width="90%" reversed margin="30px auto auto auto">
               <div>
-                <GlitchingTitle>
+                <GlitchingTitle margin="2px auto 20px auto">
                   <H1>Interplanetary</H1>
                   <H1>Interplanetary</H1>
                   <H1>Interplanetary</H1>

@@ -25,7 +25,7 @@ const About = () => {
         <Header />
         <Main>
           <Row center>
-            <BorderlessCard width="90%">
+            <BorderlessCard width="90%" margin="30px auto auto auto">
               <div>
                 <H2>Maksim Verkhoturov</H2>
                 <article>

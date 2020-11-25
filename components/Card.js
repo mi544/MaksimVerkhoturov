@@ -25,8 +25,8 @@ const Card = styled.section`
   justify-content: center;
   align-items: center;
   margin: ${p => p.margin};
-  height: ${p => (p.height ? p => p.height : "auto")};
   width: ${p => (p ? p.width[0] : "auto")};
+  height: ${p => (p ? p.height[0] : "auto")};
   flex-direction: column;
   background-color: #ffffff00;
   border: 3px solid white;
@@ -40,9 +40,11 @@ const Card = styled.section`
 
   @media (min-width: 870px) {
     width: ${p => (p ? p.width[1] : "auto")};
+    height: ${p => (p ? p.height[1] : "auto")};
   }
   @media (min-width: 1215px) {
     width: ${p => (p ? p.width[2] : "auto")};
+    height: ${p => (p ? p.height[2] : "auto")};
   }
 `;
 

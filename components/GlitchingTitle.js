@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // accepts only 4 h tags for now
 const GlitchingTitle = styled.div`
+  margin: ${p => (p.margin ? p.margin : "auto")};
+
   & > * {
     position: relative;
   }

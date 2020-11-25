@@ -10,16 +10,6 @@ const appear = keyframes`
   }
 `;
 
-const isAnimated = (p, appear) => {
-  if (p.appearDuration) {
-    return css`
-      animation: ${appear} ${p.appearDuration}s forwards;
-    `;
-  } else {
-    return `animation: none;`;
-  }
-};
-
 const Card = styled.section`
   display: flex;
   justify-content: center;
@@ -36,7 +26,14 @@ const Card = styled.section`
 
   transform: translateY(25px);
   // only appear once when the page is loaded the first time
-  ${p => isAnimated(p, appear)}
+  ${p =>
+    p.appearDuration
+      ? css`
+          animation: ${appear} ${p.appearDuration}s forwards;
+        `
+      : css`
+          animation: none;
+        `}
 
   @media (min-width: 870px) {
     width: ${p => (p ? p.width[1] : "auto")};

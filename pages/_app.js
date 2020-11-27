@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
   }
 
   &::selection{
@@ -14,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: black;
-    text-decoration: none
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 

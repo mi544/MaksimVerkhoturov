@@ -15,12 +15,12 @@ const Card = styled.section`
   justify-content: center;
   align-items: center;
   margin: ${p => p.margin};
-  width: ${p => (p ? p.width[0] : "auto")};
-  height: ${p => (p ? p.height[0] : "auto")};
+  min-width: ${p => (p ? p.width[0] : "auto")};
+  min-height: ${p => (p ? p.height[0] : "auto")};
   flex-direction: column;
   background-color: #ffffff00;
   border: 3px solid white;
-  padding: 1% 2%;
+  padding: ${p => (p.padding ? p.padding : "1% 2%")};
   box-shadow: -5px 6px 0px 0 lightgrey;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
 
@@ -36,12 +36,12 @@ const Card = styled.section`
         `}
 
   @media (min-width: 870px) {
-    width: ${p => (p ? p.width[1] : "auto")};
-    height: ${p => (p ? p.height[1] : "auto")};
+    min-width: ${p => (p ? p.width[1] : "auto")};
+    min-height: ${p => (p ? p.height[1] : "auto")};
   }
   @media (min-width: 1215px) {
-    width: ${p => (p ? p.width[2] : "auto")};
-    height: ${p => (p ? p.height[2] : "auto")};
+    min-width: ${p => (p ? p.width[2] : "auto")};
+    min-height: ${p => (p ? p.height[2] : "auto")};
   }
 `;
 

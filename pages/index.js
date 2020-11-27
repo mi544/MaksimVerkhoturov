@@ -46,7 +46,7 @@ const Home = () => {
               appearDuration={2}
             >
               <H1>Projects</H1>
-              <H4>Take a look at my projects</H4>
+              <H4>Take a look at the projects I've worked on</H4>
               <Row margin="50px 0 10px 0" individualMargin="0 10px 0 10px">
                 <Link href="/projects" passHref>
                   <StyledLink>

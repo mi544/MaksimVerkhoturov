@@ -7,5 +7,7 @@ export * from "./GlitchingTitle";
 export * from "./H1";
 export * from "./H2";
 export * from "./H4";
+export * from "./Button";
+export * from "./StyledLink";
 export * from "./Row";
 export * from "./Container";

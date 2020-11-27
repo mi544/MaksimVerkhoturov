@@ -1,5 +1,19 @@
 import Head from "next/head";
-import { Header, Footer, Main, Card, H1, H2, H4, Row, Container } from "components";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Header,
+  Footer,
+  Main,
+  Card,
+  H1,
+  H2,
+  H4,
+  Row,
+  Container,
+  Button,
+  StyledLink
+} from "components";
 
 const Home = () => {
   return (
@@ -13,11 +27,15 @@ const Home = () => {
           <Row margin="7vh auto auto 6%">
             <Card
               width={["80%", "60%", "40%"]}
-              height={["20vh", "27vh", "30vh"]}
+              height={["35vh", "35vh", "35vh"]}
+              padding="5%"
               appearDuration={1.4}
             >
               <H1>Software developer</H1>
               <H4>Hello! I develop apps.</H4>
+              <Button width="75%" height="75px">
+                Learn More
+              </Button>
             </Card>
           </Row>
           <Row margin="10vh 10% auto 6%">
@@ -28,7 +46,45 @@ const Home = () => {
               appearDuration={2}
             >
               <H1>Projects</H1>
-              <H4>This is where all my projects will be</H4>
+              <H4>Take a look at my projects</H4>
+              <Row margin="50px 0 10px 0" individualMargin="0 10px 0 10px">
+                <Link href="/projects" passHref>
+                  <StyledLink>
+                    <Image
+                      src="/images/tortoise-png-bw.png"
+                      alt="tortoise"
+                      width={100}
+                      height={100}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </StyledLink>
+                </Link>
+                <Link href="/projects" passHref>
+                  <StyledLink>
+                    <Image
+                      src="/images/rocket-png-bw.png"
+                      alt="rocket"
+                      width={100}
+                      height={100}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </StyledLink>
+                </Link>
+                <Link href="/projects" passHref>
+                  <StyledLink>
+                    <Image
+                      src="/images/wt-png-bw.png"
+                      alt="working title"
+                      width={100}
+                      height={100}
+                      layout="intrinsic"
+                      quality={100}
+                    />
+                  </StyledLink>
+                </Link>
+              </Row>
             </Card>
           </Row>
           <Row margin="10vh 2% auto 6%">

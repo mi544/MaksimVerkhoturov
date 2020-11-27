@@ -30,12 +30,7 @@ const Resources = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle margin="2px auto 20px auto">
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
-                </GlitchingTitle>
+                <H1>Books</H1>
 
                 <article>
                   <p>

@@ -134,8 +134,8 @@ const Projects = () => {
               </div>
               <div>
                 <Image
-                  src="/images/tortoise-mobile.png"
-                  alt="tortoise"
+                  src="/images/wt.png"
+                  alt="working title"
                   width={600}
                   height={600}
                   layout="intrinsic"

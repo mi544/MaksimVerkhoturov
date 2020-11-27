@@ -22,7 +22,7 @@ const Projects = () => {
       <Container>
         <Header />
         <Main>
-          <Row center>
+          <Row center id="moodmusic">
             <BorderlessCard
               appearDuration={1}
               delayDuration={0.1}
@@ -62,7 +62,7 @@ const Projects = () => {
               </div>
             </BorderlessCard>
           </Row>
-          <Row center>
+          <Row center id="interplanetarytravel">
             <BorderlessCard
               appearDuration={1}
               delayDuration={0.1}
@@ -104,7 +104,7 @@ const Projects = () => {
               </div>
             </BorderlessCard>
           </Row>
-          <Row center>
+          <Row center id="workingtitle">
             <BorderlessCard
               appearDuration={1}
               delayDuration={0.1}

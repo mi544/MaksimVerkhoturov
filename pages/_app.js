@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Poppins", sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   &::selection{
     color: ${p => p.theme.textColor};
     background:${p => p.theme.accentColor}

@@ -48,7 +48,7 @@ const Home = () => {
               <H1>Projects</H1>
               <H4>Take a look at the projects I've worked on</H4>
               <Row margin="50px 0 10px 0" individualMargin="0 10px 0 10px">
-                <Link href="/projects" passHref>
+                <Link href="/projects#moodmusic" passHref>
                   <StyledLink>
                     <Image
                       src="/images/tortoise-png-bw.png"
@@ -60,7 +60,7 @@ const Home = () => {
                     />
                   </StyledLink>
                 </Link>
-                <Link href="/projects" passHref>
+                <Link href="/projects#interplanetarytravel" passHref>
                   <StyledLink>
                     <Image
                       src="/images/rocket-png-bw.png"
@@ -72,7 +72,7 @@ const Home = () => {
                     />
                   </StyledLink>
                 </Link>
-                <Link href="/projects" passHref>
+                <Link href="/projects#workingtitle" passHref>
                   <StyledLink>
                     <Image
                       src="/images/wt-png-bw.png"

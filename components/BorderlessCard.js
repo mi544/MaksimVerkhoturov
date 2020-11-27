@@ -24,6 +24,7 @@ const BorderlessCard = styled.section`
 
   & > *:first-child {
     width: 100%;
+    padding: 0 20px;
     font-size: 1.5em;
     display: flex;
     flex-direction: column;
@@ -43,6 +44,7 @@ const BorderlessCard = styled.section`
   }
   & > *:last-child {
     width: 100%;
+    padding: 0 20px;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
     order: -1;
     text-align: center;

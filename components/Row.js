@@ -10,6 +10,15 @@ const Row = styled.div`
           justify-content: center;
         `
       : ""}
+
+  & > * {
+    ${p =>
+      p.individualMargin
+        ? css`
+            margin: ${p.individualMargin} !important;
+          `
+        : ""}
+  }
 `;
 
 export { Row };

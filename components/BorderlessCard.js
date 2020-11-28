@@ -45,7 +45,12 @@ const BorderlessCard = styled.section`
   & > *:last-child {
     width: 100%;
     padding: 0 20px;
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+    ${p =>
+      !p.noClip
+        ? css`
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+          `
+        : ""}
     order: -1;
     text-align: center;
     ${p =>
@@ -91,7 +96,13 @@ const BorderlessCard = styled.section`
     }
     & > *:last-child {
       width: 50%;
-      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+      ${p =>
+        !p.noClip
+          ? css`
+              clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+            `
+          : ""}
+
       order: ${p => (p.reversed ? "-1" : "1")};
       ${p =>
         p.appearDuration

@@ -31,6 +31,7 @@ const About = () => {
               textDelayDuration={0.6}
               width="90%"
               margin="30px auto auto auto"
+              noClip
             >
               <div>
                 <H2>Maksim Verkhoturov</H2>
@@ -48,10 +49,10 @@ const About = () => {
               </div>
               <div>
                 <Image
-                  src="/images/tortoise-mobile.png"
-                  alt="tortoise"
-                  width={600}
-                  height={600}
+                  src="/images/photo.png"
+                  alt="personal photo"
+                  width={800}
+                  height={800}
                   layout="intrinsic"
                   quality={100}
                 />

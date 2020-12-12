@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import SMLCheck from "utils/hooks/SmallMediumLargeCheck";
 
 import {
   Header,
@@ -10,9 +9,11 @@ import {
   GlitchingTitle,
   Footer,
   Row,
-  H1,
   H2,
-  H4
+  H3,
+  H4,
+  Align,
+  HighlightText
 } from "components";
 
 const About = () => {
@@ -60,6 +61,44 @@ const About = () => {
               </div>
             </BorderlessCard>
           </Row>
+          <Align align="left" margin="10vh auto auto 20%">
+            <H2>Skills</H2>
+
+            <H3 line="60px">
+              <HighlightText delay="-4s">Python</HighlightText>
+            </H3>
+            <H3 line="60px">
+              <HighlightText delay="-3s">JavaScript</HighlightText>
+            </H3>
+            <H3 line="60px">
+              <HighlightText delay="-2s">HTML, CSS</HighlightText>
+            </H3>
+            <H3 line="60px">
+              <HighlightText delay="-3s">Node.js</HighlightText>
+            </H3>
+            <H3 line="60px">
+              <HighlightText delay="-1s">React, Redux, Next.js</HighlightText>
+            </H3>
+
+            <H4 line="40px">
+              <HighlightText noAnimate>React Native, Expo.io</HighlightText>
+            </H4>
+            <H3 line="50px">
+              <HighlightText noAnimate>Express</HighlightText>
+            </H3>
+            <H3 line="50px">
+              <HighlightText delay="-8s">Mocha, Chai, Jest, Selenium</HighlightText>
+            </H3>
+            <H3 line="50px">
+              <HighlightText delay="-5s">MySQL, Sequelize</HighlightText>
+            </H3>
+            <H3 line="50px">
+              <HighlightText delay="-5s">MongoDB, Mongoose</HighlightText>
+            </H3>
+            <H3 line="50px">
+              <HighlightText noAnimate>Git</HighlightText>
+            </H3>
+          </Align>
         </Main>
         <Footer />
       </Container>

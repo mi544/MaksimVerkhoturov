@@ -55,6 +55,7 @@ const About = () => {
                   height={800}
                   layout="intrinsic"
                   quality={100}
+                  priority
                 />
               </div>
             </BorderlessCard>

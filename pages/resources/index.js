@@ -52,6 +52,7 @@ const Resources = () => {
                   height={600}
                   layout="intrinsic"
                   quality={100}
+                  priority
                 />
               </div>
             </BorderlessCard>

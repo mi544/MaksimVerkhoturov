@@ -58,6 +58,7 @@ const Projects = () => {
                   height={600}
                   layout="intrinsic"
                   quality={100}
+                  priority
                 />
               </div>
             </BorderlessCard>
@@ -100,6 +101,7 @@ const Projects = () => {
                   height={600}
                   layout="intrinsic"
                   quality={100}
+                  priority
                 />
               </div>
             </BorderlessCard>
@@ -140,6 +142,7 @@ const Projects = () => {
                   height={600}
                   layout="intrinsic"
                   quality={100}
+                  priority
                 />
               </div>
             </BorderlessCard>

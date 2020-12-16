@@ -51,7 +51,7 @@ const BorderlessCard = styled.section`
             clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
           `
         : ""}
-    order: -1;
+    order: ${p => (p.reversedMobile ? 1 : -1)};
     text-align: center;
     ${p =>
       p.appearDuration

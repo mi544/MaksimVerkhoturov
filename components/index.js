@@ -16,3 +16,4 @@ export * from "./Row";
 export * from "./Container";
 export * from "./P";
 export * from "./Line";
+export * from "./IconRectangleLink";

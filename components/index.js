@@ -14,3 +14,5 @@ export * from "./Button";
 export * from "./StyledLink";
 export * from "./Row";
 export * from "./Container";
+export * from "./P";
+export * from "./Line";

@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: black;
+    color: ${p => p.theme.textColor};
     text-decoration: none;
     cursor: pointer;
   }

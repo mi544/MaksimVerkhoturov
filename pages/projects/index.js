@@ -1,5 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
+import { IconContext } from "react-icons";
+import { VscGithubAlt } from "react-icons/vsc";
+import { FaPager } from "react-icons/fa";
+import { SiExpo } from "react-icons/si";
 
 import {
   Header,
@@ -10,12 +14,13 @@ import {
   Footer,
   Row,
   H1,
-  H4
+  H4,
+  IconRectangleLink
 } from "components";
 
 const Projects = () => {
   return (
-    <>
+    <IconContext.Provider value={{ size: "75px", color: "white" }}>
       <Head>
         <title>Projects</title>
       </Head>
@@ -39,18 +44,38 @@ const Projects = () => {
                 </GlitchingTitle>
 
                 <article>
-                  <p>
-                    最近、よく耳にする『糖質制限』なる言葉。大豆粉を購入したので、おからパウダーと合わせ、買い置きのココナッツも加えてホットケーキ（パンケーキ）を焼いてみることにしました。
-                  </p>
+                  <H4>Technologies used:</H4>
                   <p>
                     牛乳→水にする時はバターと黒蜜だけでも美味しいですがトッピングは栗や生クリームなども♫お好きな和風を楽しんで下さい^o^
                   </p>
                   <p>
                     の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
                   </p>
+                  <Row justify="space-evenly">
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://github.com/mi544/mood-music"
+                    >
+                      <VscGithubAlt />
+                      <p>Github</p>
+                    </IconRectangleLink>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://moodmusic.today/"
+                    >
+                      <FaPager />
+                      <p>Open</p>
+                    </IconRectangleLink>
+                  </Row>
                 </article>
               </div>
-              <div>
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://moodmusic.today/"
+              >
                 <Image
                   src="/images/tortoise-mobile.png"
                   alt="tortoise"
@@ -60,7 +85,7 @@ const Projects = () => {
                   quality={100}
                   priority
                 />
-              </div>
+              </a>
             </BorderlessCard>
           </Row>
           <Row center id="interplanetarytravel">
@@ -82,6 +107,7 @@ const Projects = () => {
                 </GlitchingTitle>
 
                 <article>
+                  <H4>Technologies used:</H4>
                   <p>
                     最近、よく耳にする『糖質制限』なる言葉。大豆粉を購入したので、おからパウダーと合わせ、買い置きのココナッツも加えてホットケーキ（パンケーキ）を焼いてみることにしました。
                   </p>
@@ -91,9 +117,31 @@ const Projects = () => {
                   <p>
                     の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
                   </p>
+                  <Row justify="space-evenly">
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://github.com/mi544/interplanetary-travel-planner"
+                    >
+                      <VscGithubAlt />
+                      <p>Github</p>
+                    </IconRectangleLink>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://interplanetarytravel.space/"
+                    >
+                      <FaPager />
+                      <p>Open</p>
+                    </IconRectangleLink>
+                  </Row>
                 </article>
               </div>
-              <div>
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://interplanetarytravel.space/"
+              >
                 <Image
                   src="/images/rocket-mobile.png"
                   alt="rocket"
@@ -103,7 +151,7 @@ const Projects = () => {
                   quality={100}
                   priority
                 />
-              </div>
+              </a>
             </BorderlessCard>
           </Row>
           <Row center id="workingtitle">
@@ -123,6 +171,7 @@ const Projects = () => {
                 </GlitchingTitle>
 
                 <article>
+                  <H4>Technologies used:</H4>
                   <p>
                     最近、よく耳にする『糖質制限』なる言葉。大豆粉を購入したので、おからパウダーと合わせ、買い置きのココナッツも加えてホットケーキ（パンケーキ）を焼いてみることにしました。
                   </p>
@@ -132,9 +181,31 @@ const Projects = () => {
                   <p>
                     の時さっくり混ぜるとふわっとした仕上がりになります。そば粉を入れずに薄力粉のみでもOK
                   </p>
+                  <Row justify="space-evenly">
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://github.com/mi544/working-title"
+                    >
+                      <VscGithubAlt />
+                      <p>Github</p>
+                    </IconRectangleLink>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://expo.io/@mi544/projects/working-title"
+                    >
+                      <SiExpo />
+                      <p>Open</p>
+                    </IconRectangleLink>
+                  </Row>
                 </article>
               </div>
-              <div>
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://github.com/mi544/working-title"
+              >
                 <Image
                   src="/images/wt.png"
                   alt="working title"
@@ -144,13 +215,13 @@ const Projects = () => {
                   quality={100}
                   priority
                 />
-              </div>
+              </a>
             </BorderlessCard>
           </Row>
         </Main>
         <Footer />
       </Container>
-    </>
+    </IconContext.Provider>
   );
 };
 

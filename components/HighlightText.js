@@ -1,17 +1,17 @@
 import styled, { keyframes, css } from "styled-components";
 
 const colorChange = keyframes`
-0% {
-  text-shadow: -4px 2px #272727;
-}
-
-50% {
-  text-shadow: -4px 2px #2e3e7b;
-}
-
-100% {
-  text-shadow: -4px 2px #272727;
-}
+  0% {
+    text-shadow: -4px 2px #272727;
+  }
+  
+  50% {
+    text-shadow: -4px 2px #2e3e7b;
+  }
+  
+  100% {
+    text-shadow: -4px 2px #272727;
+  }
 `;
 
 // accepts only 4 h tags for now

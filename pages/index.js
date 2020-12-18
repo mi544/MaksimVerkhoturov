@@ -57,7 +57,7 @@ const Home = () => {
                       width={100}
                       height={100}
                       layout="intrinsic"
-                      quality={100}
+                      quality={50}
                     />
                   </StyledLink>
                 </Link>
@@ -69,7 +69,7 @@ const Home = () => {
                       width={100}
                       height={100}
                       layout="intrinsic"
-                      quality={100}
+                      quality={50}
                     />
                   </StyledLink>
                 </Link>
@@ -81,7 +81,7 @@ const Home = () => {
                       width={100}
                       height={100}
                       layout="intrinsic"
-                      quality={100}
+                      quality={50}
                     />
                   </StyledLink>
                 </Link>

@@ -82,7 +82,7 @@ const Projects = () => {
                   width={600}
                   height={600}
                   layout="intrinsic"
-                  quality={100}
+                  quality={50}
                   priority
                 />
               </a>
@@ -148,7 +148,7 @@ const Projects = () => {
                   width={600}
                   height={600}
                   layout="intrinsic"
-                  quality={100}
+                  quality={50}
                   priority
                 />
               </a>
@@ -212,7 +212,7 @@ const Projects = () => {
                   width={600}
                   height={600}
                   layout="intrinsic"
-                  quality={100}
+                  quality={50}
                   priority
                 />
               </a>

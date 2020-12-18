@@ -57,7 +57,7 @@ const About = () => {
                   width={800}
                   height={800}
                   layout="intrinsic"
-                  quality={100}
+                  quality={50}
                   priority
                 />
               </div>

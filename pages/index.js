@@ -40,8 +40,9 @@ const Home = () => {
           </Row>
           <Row margin="10vh 10% auto 6%">
             <Card
-              height={["36vh", "45vh", "50vh"]}
               width={["85%", "65%", "60%"]}
+              height={["36vh", "45vh", "50vh"]}
+              padding="5%"
               margin="auto 0 auto auto"
               appearDuration={2}
             >

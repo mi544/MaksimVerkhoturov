@@ -1,6 +1,16 @@
 import Head from "next/head";
+import Image from "next/image";
 
-import { Header, Main, Container, Footer } from "components";
+import {
+  Header,
+  Main,
+  Container,
+  Footer,
+  Row,
+  BorderlessCard,
+  GlitchingTitle,
+  H1
+} from "components";
 
 const Resources = () => {
   return (
@@ -11,7 +21,9 @@ const Resources = () => {
       <Container>
         <Header />
         <Main>
-          <h1>Resources</h1>
+          <Row center>
+            <H1>TBD</H1>
+          </Row>
         </Main>
         <Footer />
       </Container>

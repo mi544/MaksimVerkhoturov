@@ -7,7 +7,7 @@ const Container = styled.div`
   box-sizing: border-box;
   background: ${p => p.theme.backgroundColor};
   color: ${p => p.theme.textColor};
-  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 `;
 
 export { Container };

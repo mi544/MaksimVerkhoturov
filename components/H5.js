@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
-const H2 = styled.h2`
-  font-size: 1.7em;
+const H5 = styled.h5`
+  font-size: 1em;
   line-height: ${p => (p.line ? p.line : "normal")};
   ${p =>
     p.margin
@@ -9,13 +9,19 @@ const H2 = styled.h2`
           margin: ${p.margin};
         `
       : ""}
+  ${p =>
+    p.center
+      ? css`
+          text-align: center;
+        `
+      : ""}
 
   @media (min-width: 870px) {
-    font-size: 2em;
+    font-size: 1.2em;
   }
   @media (min-width: 1215px) {
-    font-size: 2.5em;
+    font-size: 1.5em;
   }
 `;
 
-export { H2 };
+export { H5 };

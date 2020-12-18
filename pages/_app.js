@@ -1,11 +1,15 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import MediaQueriesContext from "utils/MediaQueriesContext";
-import useWindowDimensions from "utils/hooks/useWindowDimensions";
+import Head from "next/head";
 
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   &::selection{
@@ -14,8 +18,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: black;
-    text-decoration: none
+    color: ${p => p.theme.textColor};
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 
@@ -30,15 +35,19 @@ const theme = {
 };
 
 export default function App({ Component, pageProps }) {
-  const dimensions = useWindowDimensions();
   return (
     <>
-      <MediaQueriesContext.Provider value={dimensions}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </MediaQueriesContext.Provider>
+      <Head>
+        {/* Use minimum-scale=1 to enable GPU rasterization */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

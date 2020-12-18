@@ -1,49 +1,118 @@
-import styled, { keyframes, css } from "styled-components";
-import { Card } from "components";
+import styled, { css, keyframes } from "styled-components";
+import { appear } from "components/animations";
 
-const columnView = p => {
-  if (p.column) {
-    return css`
-      & > *:first-child {
-        width: 100%;
-        order: 2;
-        font-size: 1.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      & > *:last-child {
-        width: 100%;
-        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
-      }
-    `;
-  } else {
-    return css`
-      & > *:first-child {
-        width: 50%;
-        font-size: 1.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      & > *:last-child {
-        width: 50%;
-        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
-      }
-    `;
-  }
-};
-
-const BorderlessCard = styled(Card)`
-  flex-direction: ${p => (p.column ? "column" : "row")};
-  border: none;
-  box-shadow: none;
+const BorderlessCard = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: ${p => (p.margin ? p.margin : "auto")};
+  height: ${p => (p.height ? p.height : "auto")};
+  width: ${p => (p.width ? p.width : "auto")};
+  flex-direction: column;
+  background-color: #ffffff00;
+  padding: 1% 2%;
   justify-content: space-evenly;
-  clip-path: none;
 
-  ${p => columnView(p)}
+  & > *:first-child {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ${p =>
+      p.appearDuration
+        ? css`
+            transform: translateY(5vh);
+            opacity: 0;
+            animation: ${appear} ${p.appearDuration}s
+              ${p.delayDuration + p.textDelayDuration}s forwards;
+          `
+        : css`
+            animation: none;
+          `}
+  }
+  & > *:last-child {
+    width: 100%;
+    padding: 0 20px;
+    ${p =>
+      !p.noClip
+        ? css`
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+          `
+        : ""}
+    order: ${p => (p.reversedMobile ? 1 : -1)};
+    text-align: center;
+    ${p =>
+      p.appearDuration
+        ? css`
+            transform: translateY(5vh);
+            opacity: 0;
+            animation: ${appear} ${p.appearDuration}s ${p.delayDuration}s forwards;
+          `
+        : css`
+            animation: none;
+          `}
+  }
+
+  @media (min-width: 870px) {
+    flex-direction: row;
+
+    & > *:first-child {
+      width: 50%;
+      font-size: 1.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      ${p =>
+        p.appearDuration
+          ? css`
+              ${p.reversed
+                ? css`
+                    transform: translateX(10%);
+                  `
+                : css`
+                    transform: translateX(-10%);
+                  `}
+
+              opacity: 0;
+              animation: ${appear} ${p.appearDuration}s
+                ${p.delayDuration + p.textDelayDuration}s forwards;
+            `
+          : css`
+              animation: none;
+            `}
+    }
+    & > *:last-child {
+      width: 50%;
+      ${p =>
+        !p.noClip
+          ? css`
+              clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
+            `
+          : ""}
+
+      order: ${p => (p.reversed ? "-1" : "1")};
+      ${p =>
+        p.appearDuration
+          ? css`
+              ${p.reversed
+                ? css`
+                    transform: translateX(-20%);
+                  `
+                : css`
+                    transform: translateX(20%);
+                  `}
+              opacity: 0;
+              animation: ${appear} ${p.appearDuration}s ${p.delayDuration}s forwards;
+            `
+          : css`
+              animation: none;
+            `}
+    }
+  }
 `;
 
 export { BorderlessCard };

@@ -142,6 +142,10 @@ const NavBar = styled.div`
 
   z-index: 10;
 
+  & a {
+    color: ${p => p.theme.backgroundColor};
+  }
+
   // if loaded for the first time, no animation is needed
   // TODO change that to be triggered on initial page load (refresh in the browser, not just any component mount)
   ${p =>

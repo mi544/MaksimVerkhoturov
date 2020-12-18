@@ -63,7 +63,7 @@ const About = () => {
               </div>
             </BorderlessCard>
           </Row>
-          <Line />
+          <Line appearDuration={1} />
           <Row>
             <BorderlessCard
               reversedMobile

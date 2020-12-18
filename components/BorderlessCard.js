@@ -1,14 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-
-const appear = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import { appear } from "components/animations";
 
 const BorderlessCard = styled.section`
   width: 100%;

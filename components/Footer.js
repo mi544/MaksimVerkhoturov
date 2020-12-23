@@ -53,11 +53,17 @@ const Footer = () => {
       <IconContext.Provider value={{ size: "50px", color: "white" }}>
         <FadeBeforeFooter />
         <FooterWrapper>
-          <a target="_blank" rel="noreferrer noopener" href="https://github.com/mi544">
+          <a
+            aria-label="Github"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://github.com/mi544"
+          >
             <VscGithubInverted />
           </a>
           <MarginComponent />
           <a
+            aria-label="Linkedin"
             target="_blank"
             rel="noreferrer noopener"
             href="https://www.linkedin.com/in/mi544"

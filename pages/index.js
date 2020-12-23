@@ -58,7 +58,7 @@ const Home = () => {
                   justify="center"
                 >
                   <Link href="/projects#moodmusic" passHref>
-                    <StyledLink>
+                    <StyledLink aria-label="Mood Music Project">
                       <Image
                         src="/images/tortoise-png-bw.png"
                         alt="tortoise"
@@ -70,7 +70,7 @@ const Home = () => {
                     </StyledLink>
                   </Link>
                   <Link href="/projects#interplanetarytravel" passHref>
-                    <StyledLink>
+                    <StyledLink aria-label="Interplanetary Travel Project">
                       <Image
                         src="/images/rocket-png-bw.png"
                         alt="rocket"
@@ -82,7 +82,7 @@ const Home = () => {
                     </StyledLink>
                   </Link>
                   <Link href="/projects#workingtitle" passHref>
-                    <StyledLink>
+                    <StyledLink aria-label="Working Title Project">
                       <Image
                         src="/images/wt-png-bw.png"
                         alt="working title"

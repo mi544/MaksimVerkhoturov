@@ -8,6 +8,7 @@ import {
   Card,
   H1,
   H2,
+  H3,
   H4,
   Row,
   Container,
@@ -31,11 +32,13 @@ const Home = () => {
               padding="5%"
               appearDuration={1.4}
             >
-              <H1>Software developer</H1>
-              <H4>Hello! I develop apps.</H4>
-              <Button width="75%" height="75px">
-                Learn More
-              </Button>
+              <H2>Software developer</H2>
+              <section>
+                <H3>Hello! I develop apps.</H3>
+                <Button width="100%" height="75px">
+                  Learn More
+                </Button>
+              </section>
             </Card>
           </Row>
           <Row margin="10vh 10% auto 6%">
@@ -46,46 +49,52 @@ const Home = () => {
               margin="auto 0 auto auto"
               appearDuration={2}
             >
-              <H1>Projects</H1>
-              <H4>Take a look at the projects I've worked on</H4>
-              <Row margin="50px 0 10px 0" individualMargin="0 10px 0 10px">
-                <Link href="/projects#moodmusic" passHref>
-                  <StyledLink>
-                    <Image
-                      src="/images/tortoise-png-bw.png"
-                      alt="tortoise"
-                      width={100}
-                      height={100}
-                      layout="intrinsic"
-                      quality={50}
-                    />
-                  </StyledLink>
-                </Link>
-                <Link href="/projects#interplanetarytravel" passHref>
-                  <StyledLink>
-                    <Image
-                      src="/images/rocket-png-bw.png"
-                      alt="rocket"
-                      width={100}
-                      height={100}
-                      layout="intrinsic"
-                      quality={50}
-                    />
-                  </StyledLink>
-                </Link>
-                <Link href="/projects#workingtitle" passHref>
-                  <StyledLink>
-                    <Image
-                      src="/images/wt-png-bw.png"
-                      alt="working title"
-                      width={100}
-                      height={100}
-                      layout="intrinsic"
-                      quality={50}
-                    />
-                  </StyledLink>
-                </Link>
-              </Row>
+              <H2>Projects</H2>
+              <section>
+                <H3>Take a look at the projects I've worked on</H3>
+                <Row
+                  margin="50px 0 10px 0"
+                  individualMargin="0 10px 0 10px"
+                  justify="center"
+                >
+                  <Link href="/projects#moodmusic" passHref>
+                    <StyledLink>
+                      <Image
+                        src="/images/tortoise-png-bw.png"
+                        alt="tortoise"
+                        width={100}
+                        height={100}
+                        layout="intrinsic"
+                        quality={50}
+                      />
+                    </StyledLink>
+                  </Link>
+                  <Link href="/projects#interplanetarytravel" passHref>
+                    <StyledLink>
+                      <Image
+                        src="/images/rocket-png-bw.png"
+                        alt="rocket"
+                        width={100}
+                        height={100}
+                        layout="intrinsic"
+                        quality={50}
+                      />
+                    </StyledLink>
+                  </Link>
+                  <Link href="/projects#workingtitle" passHref>
+                    <StyledLink>
+                      <Image
+                        src="/images/wt-png-bw.png"
+                        alt="working title"
+                        width={100}
+                        height={100}
+                        layout="intrinsic"
+                        quality={50}
+                      />
+                    </StyledLink>
+                  </Link>
+                </Row>
+              </section>
             </Card>
           </Row>
           <Row margin="10vh 2% auto 6%">
@@ -94,8 +103,8 @@ const Home = () => {
               height={["45vh", "45vh", "60vh"]}
               appearDuration={2.7}
             >
-              <H1>Contact me</H1>
-              <H2>sd32@pm.me</H2>
+              <H2>Contact me</H2>
+              <H3>sd32@pm.me</H3>
             </Card>
           </Row>
         </Main>

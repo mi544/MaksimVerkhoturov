@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies, no-unused-vars, no-param-reassign */
 const path = require('path')
 
 module.exports = {

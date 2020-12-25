@@ -1,28 +1,27 @@
-import Head from "next/head";
-import Image from "next/image";
-import { IconContext } from "react-icons";
-import { VscGithubAlt } from "react-icons/vsc";
-import { FaPager } from "react-icons/fa";
-import { SiExpo } from "react-icons/si";
+import Head from 'next/head'
+import Image from 'next/image'
+import { IconContext } from 'react-icons'
+import { VscGithubAlt } from 'react-icons/vsc'
+import { FaPager } from 'react-icons/fa'
+import { SiExpo } from 'react-icons/si'
 
 import {
-  Header,
   Main,
   Container,
   BorderlessCard,
   GlitchingTitle,
-  Footer,
   Row,
   H1,
-  H4,
   IconRectangleLink,
   P,
   H5
-} from "components";
+} from '@S'
+
+import { Header, Footer } from '@C'
 
 const Projects = () => {
   return (
-    <IconContext.Provider value={{ size: "75px", color: "white" }}>
+    <IconContext.Provider value={{ size: '75px', color: 'white' }}>
       <Head>
         <title>Projects</title>
       </Head>
@@ -244,7 +243,7 @@ const Projects = () => {
         <Footer />
       </Container>
     </IconContext.Provider>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

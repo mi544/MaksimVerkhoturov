@@ -1,13 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head'
+import Image from 'next/image'
 
 import {
-  Header,
   Main,
   Container,
   BorderlessCard,
-  GlitchingTitle,
-  Footer,
   Row,
   H2,
   H3,
@@ -16,7 +13,9 @@ import {
   HighlightText,
   P,
   Line
-} from "components";
+} from '@S'
+
+import { Header, Footer } from '@C'
 
 const About = () => {
   return (
@@ -41,12 +40,12 @@ const About = () => {
                 <article>
                   <P>&ensp;&ensp;Hello!</P>
                   <P>
-                    &ensp;&ensp;I'm a Software Engineer specializing in full stack web
-                    development. I enjoy working on both front end and back end.
+                    &ensp;&ensp;I&apos;m a Software Engineer specializing in full stack
+                    web development. I enjoy working on both front end and back end.
                   </P>
                   <P>
                     &ensp;&ensp;Excited to be building apps and creating experiences.
-                    Let's work together!
+                    Let&apos;s work together!
                   </P>
                 </article>
               </div>
@@ -68,10 +67,6 @@ const About = () => {
             <BorderlessCard
               reversedMobile
               appearDuration={1}
-              appearDuration={1}
-              appearDuration={1}
-              appearDuration={1}
-              appearDuration={1}
               delayDuration={1}
               textDelayDuration={-0.2}
               width="90%"
@@ -79,9 +74,9 @@ const About = () => {
             >
               <div>
                 <P>
-                  &ensp;&ensp;I've always been excited about technologies and programming
-                  in general, and now I am the one developing apps and creating
-                  experiences. That means a lot to me!
+                  &ensp;&ensp;I&apos;ve always been excited about technologies and
+                  programming in general, and now I am the one developing apps and
+                  creating experiences. That means a lot to me!
                 </P>
                 <P marginTop="0rem">
                   &ensp;&ensp;I believe that any ambitious goal can be achieved more
@@ -90,10 +85,10 @@ const About = () => {
                   combined can the team achieve great results.
                 </P>
                 <P marginTop="0.3rem">
-                  &ensp;&ensp;That's why I want to be part of a team of solution-driven
-                  people with strong communication skills and a passion for developing,
-                  where everyone's opinion is valued and it's easy to study the codebase
-                  and learn from more experienced developers!
+                  &ensp;&ensp;That&apos;s why I want to be part of a team of
+                  solution-driven people with strong communication skills and a passion
+                  for developing, where everyone&apos;s opinion is valued and it&apos;s
+                  easy to study the codebase and learn from more experienced developers!
                 </P>
               </div>
               <div>
@@ -142,7 +137,7 @@ const About = () => {
         <Footer />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default About;
+export default About

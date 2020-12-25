@@ -1,5 +1,5 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import Head from "next/head";
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,26 +13,26 @@ const GlobalStyle = createGlobalStyle`
   }
 
   &::selection{
-    color: ${p => p.theme.textColor};
-    background:${p => p.theme.accentColor}
+    color: ${(p) => p.theme.textColor};
+    background:${(p) => p.theme.accentColor}
   }
 
   a {
-    color: ${p => p.theme.textColor};
+    color: ${(p) => p.theme.textColor};
     text-decoration: none;
     cursor: pointer;
   }
-`;
+`
 
 const theme = {
-  primaryColor: "#00ffff",
-  secondaryColor: "#ffffff",
-  accentColor: "#00ffff",
-  secondaryAccentColor: "#ffffff",
-  backgroundColor: "#000000",
-  textColor: "#ffffff",
-  secondaryTextColor: "#e8e8e8"
-};
+  primaryColor: '#00ffff',
+  secondaryColor: '#ffffff',
+  accentColor: '#00ffff',
+  secondaryAccentColor: '#ffffff',
+  backgroundColor: '#000000',
+  textColor: '#ffffff',
+  secondaryTextColor: '#e8e8e8'
+}
 
 export default function App({ Component, pageProps }) {
   return (
@@ -49,5 +49,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  );
+  )
 }

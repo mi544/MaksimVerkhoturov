@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@S/*": ["./components/styled/*"],
+      "@C/*": ["./components/*"],
+      "@A/*": ["./components/animations/*"]
+    }
   }
 }

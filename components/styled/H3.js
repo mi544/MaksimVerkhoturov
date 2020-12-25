@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const H3 = styled.h3`
   font-size: 1.5em;
-  line-height: ${p => (p.line ? p.line : "normal")};
+  line-height: ${(p) => (p.line ? p.line : 'normal')};
 
   @media (min-width: 870px) {
     font-size: 1.7em;
@@ -10,6 +10,6 @@ const H3 = styled.h3`
   @media (min-width: 1215px) {
     font-size: 2em;
   }
-`;
+`
 
-export { H3 };
+export { H3 }

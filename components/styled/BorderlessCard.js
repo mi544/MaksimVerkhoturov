@@ -1,13 +1,13 @@
-import styled, { css, keyframes } from "styled-components";
-import { appear } from "components/animations";
+import styled, { css } from 'styled-components'
+import { appear } from '@A'
 
 const BorderlessCard = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
-  margin: ${p => (p.margin ? p.margin : "auto")};
-  height: ${p => (p.height ? p.height : "auto")};
-  width: ${p => (p.width ? p.width : "auto")};
+  margin: ${(p) => (p.margin ? p.margin : 'auto')};
+  height: ${(p) => (p.height ? p.height : 'auto')};
+  width: ${(p) => (p.width ? p.width : 'auto')};
   flex-direction: column;
   background-color: #ffffff00;
   padding: 1% 2%;
@@ -21,7 +21,7 @@ const BorderlessCard = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    ${p =>
+    ${(p) =>
       p.appearDuration
         ? css`
             transform: translateY(5vh);
@@ -36,15 +36,15 @@ const BorderlessCard = styled.section`
   & > *:last-child {
     width: 100%;
     padding: 0 20px;
-    ${p =>
+    ${(p) =>
       !p.noClip
         ? css`
             clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
           `
-        : ""}
-    order: ${p => (p.reversedMobile ? 1 : -1)};
+        : ''}
+    order: ${(p) => (p.reversedMobile ? 1 : -1)};
     text-align: center;
-    ${p =>
+    ${(p) =>
       p.appearDuration
         ? css`
             transform: translateY(5vh);
@@ -66,7 +66,7 @@ const BorderlessCard = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      ${p =>
+      ${(p) =>
         p.appearDuration
           ? css`
               ${p.reversed
@@ -87,15 +87,15 @@ const BorderlessCard = styled.section`
     }
     & > *:last-child {
       width: 50%;
-      ${p =>
+      ${(p) =>
         !p.noClip
           ? css`
               clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 10%, 94% 0);
             `
-          : ""}
+          : ''}
 
-      order: ${p => (p.reversed ? "-1" : "1")};
-      ${p =>
+      order: ${(p) => (p.reversed ? '-1' : '1')};
+      ${(p) =>
         p.appearDuration
           ? css`
               ${p.reversed
@@ -113,6 +113,6 @@ const BorderlessCard = styled.section`
             `}
     }
   }
-`;
+`
 
-export { BorderlessCard };
+export { BorderlessCard }

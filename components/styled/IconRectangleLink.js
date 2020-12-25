@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const IconRectangleLink = styled.a`
   display: flex;
@@ -11,7 +11,8 @@ const IconRectangleLink = styled.a`
   min-height: fit-content;
   border: white 2px solid;
   border-radius: 17px;
-  box-shadow: 5px 3px ${p => p.theme.textColor}, inset -1px -2px ${p => p.theme.textColor};
+  box-shadow: 5px 3px ${(p) => p.theme.textColor},
+    inset -1px -2px ${(p) => p.theme.textColor};
   /* & > *:nth-child(1) {
     padding-right: 10px;
   } */
@@ -21,6 +22,6 @@ const IconRectangleLink = styled.a`
     margin-right: 0.1rem;
     align-self: flex-end;
   }
-`;
+`
 
-export { IconRectangleLink };
+export { IconRectangleLink }

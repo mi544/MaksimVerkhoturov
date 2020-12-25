@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import styled, { keyframes, css } from "styled-components";
+import { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import styled, { keyframes, css } from 'styled-components'
 
 const HeaderWrapper = styled.header`
   height: 100px;
@@ -11,8 +11,8 @@ const HeaderWrapper = styled.header`
   padding: 0 16px;
   box-sizing: border-box;
   background: black;
-  border-bottom: 2px solid ${p => p.theme.primaryColor};
-`;
+  border-bottom: 2px solid ${(p) => p.theme.primaryColor};
+`
 
 const NavBarWrapper = styled.ul`
   text-align: right;
@@ -23,16 +23,16 @@ const NavBarWrapper = styled.ul`
     display: flex;
     flex-direction: row;
   }
-`;
+`
 
 const NavBarItem = styled.li`
   margin: 8px 0;
 
   @media (min-width: 915px) {
     margin: auto 5px;
-    background-color: ${p => p.theme.secondaryColor};
-    box-shadow: ${p =>
-      p.active ? `inset -4px -6px ${p.theme.backgroundColor}` : "none"};
+    background-color: ${(p) => p.theme.secondaryColor};
+    box-shadow: ${(p) =>
+      p.active ? `inset -4px -6px ${p.theme.backgroundColor}` : 'none'};
     border-radius: 6px;
     padding: 10px 15px;
     border: 1px solid white;
@@ -43,7 +43,7 @@ const NavBarItem = styled.li`
       transform: scale(1.05, 1.05);
     }
   }
-`;
+`
 
 const NavLink = styled.a`
   font-size: 1.8em;
@@ -57,20 +57,20 @@ const NavLink = styled.a`
       text-decoration: none;
     }
   }
-`;
+`
 
 const HeaderTitle = styled.span`
   margin: auto auto auto 0;
   font-size: 2em;
   font-weight: 700;
   font-variant: small-caps;
-  color: ${p => p.theme.secondaryTextColor};
+  color: ${(p) => p.theme.secondaryTextColor};
   text-shadow: 3px 1.5px 0px black;
 
   @media (max-width: 451px) {
     width: 80%;
   }
-`;
+`
 
 const MenuButton = styled.div`
   flex-direction: column;
@@ -78,8 +78,8 @@ const MenuButton = styled.div`
   border-radius: 15%;
   height: 50px;
   width: 50px;
-  background: ${p => p.theme.backgroundColor};
-  box-shadow: inset 2px -3px 0px 0px ${p => p.theme.secondaryAccentColor};
+  background: ${(p) => p.theme.backgroundColor};
+  box-shadow: inset 2px -3px 0px 0px ${(p) => p.theme.secondaryAccentColor};
   position: fixed;
   border: solid 2px white;
   top: 20px;
@@ -101,7 +101,7 @@ const MenuButton = styled.div`
   @media (min-width: 915px) {
     display: none;
   }
-`;
+`
 
 const mobileMenuAppear = keyframes`
 from {
@@ -112,7 +112,7 @@ from {
 to {
   transform: translateX(0px);
   opacity: 1;
-}`;
+}`
 
 const mobileMenuDisappear = keyframes`
 from {
@@ -123,7 +123,7 @@ from {
 to {
   transform: translateX(65px);
   opacity: 0;
-}`;
+}`
 
 const NavBar = styled.div`
   opacity: 0;
@@ -136,21 +136,21 @@ const NavBar = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  border: 1px ${p => p.theme.backgroundColor};
+  border: 1px ${(p) => p.theme.backgroundColor};
   background: yellow;
   clip-path: polygon(74% 0, 100% 0, 100% 86%, 44% 68%);
 
   z-index: 10;
 
   & a {
-    color: ${p => p.theme.backgroundColor};
+    color: ${(p) => p.theme.backgroundColor};
   }
 
   // if loaded for the first time, no animation is needed
   // TODO change that to be triggered on initial page load (refresh in the browser, not just any component mount)
-  ${p =>
+  ${(p) =>
     p.first
-      ? ""
+      ? ''
       : css`
     ${
       p.show
@@ -163,7 +163,7 @@ const NavBar = styled.div`
     };}
         `}
 
-  pointer-events: ${p => (p.show ? "auto" : "none")};
+  pointer-events: ${(p) => (p.show ? 'auto' : 'none')};
 
   @media (min-width: 915px) {
     display: flex;
@@ -173,7 +173,7 @@ const NavBar = styled.div`
     opacity: 1;
     flex-direction: column;
     align-items: flex-end;
-    /* border: 1px ${p => p.theme.backgroundColor}; */
+    /* border: 1px ${(p) => p.theme.backgroundColor}; */
     width: auto;
     height: auto;
     background: none;
@@ -181,34 +181,34 @@ const NavBar = styled.div`
     animation: none;
     pointer-events: auto;
   }
-`;
+`
 
 const Header = () => {
-  const router = useRouter();
-  const [menuShown, setMenuShown] = useState(false);
-  const [firstLoaded, setFirstLoaded] = useState(true);
+  const router = useRouter()
+  const [menuShown, setMenuShown] = useState(false)
+  const [firstLoaded, setFirstLoaded] = useState(true)
   return (
     <HeaderWrapper>
       <HeaderTitle>Maksim Verkhoturov</HeaderTitle>
 
       <NavBar show={menuShown} first={firstLoaded}>
         <NavBarWrapper>
-          <NavBarItem active={router.pathname === "/"}>
+          <NavBarItem active={router.pathname === '/'}>
             <Link href="/" passHref>
               <NavLink>Home</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem active={router.pathname === "/about"}>
+          <NavBarItem active={router.pathname === '/about'}>
             <Link href="/about" passHref>
               <NavLink>About</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem active={router.pathname === "/projects"}>
+          <NavBarItem active={router.pathname === '/projects'}>
             <Link href="/projects" passHref>
               <NavLink>Projects</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem active={router.pathname === "/resources"}>
+          <NavBarItem active={router.pathname === '/resources'}>
             <Link href="/resources" passHref>
               <NavLink>Resources</NavLink>
             </Link>
@@ -217,15 +217,15 @@ const Header = () => {
       </NavBar>
       <MenuButton
         onClick={() => {
-          setMenuShown(s => !s);
-          setFirstLoaded(false);
+          setMenuShown((s) => !s)
+          setFirstLoaded(false)
         }}
       >
-        <div></div>
-        <div></div>
+        <div />
+        <div />
       </MenuButton>
     </HeaderWrapper>
-  );
-};
+  )
+}
 
-export { Header };
+export { Header }

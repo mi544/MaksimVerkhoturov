@@ -1,1 +1,1 @@
-export * from "./appear";
+export * from './appear'

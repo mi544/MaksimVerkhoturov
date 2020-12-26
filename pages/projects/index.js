@@ -1,28 +1,27 @@
-import Head from "next/head";
-import Image from "next/image";
-import { IconContext } from "react-icons";
-import { VscGithubAlt } from "react-icons/vsc";
-import { FaPager } from "react-icons/fa";
-import { SiExpo } from "react-icons/si";
+import Head from 'next/head'
+import Image from 'next/image'
+import { IconContext } from 'react-icons'
+import { VscGithubAlt } from 'react-icons/vsc'
+import { FaPager } from 'react-icons/fa'
+import { SiExpo } from 'react-icons/si'
 
 import {
-  Header,
   Main,
   Container,
   BorderlessCard,
   GlitchingTitle,
-  Footer,
   Row,
-  H1,
-  H4,
+  H2,
   IconRectangleLink,
   P,
   H5
-} from "components";
+} from '@S'
+
+import { Header, Footer } from '@C'
 
 const Projects = () => {
   return (
-    <IconContext.Provider value={{ size: "75px", color: "white" }}>
+    <IconContext.Provider value={{ size: '75px', color: 'white' }}>
       <Head>
         <title>Projects</title>
       </Head>
@@ -38,11 +37,11 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle margin="2px auto 20px auto">
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
-                  <H1>Mood Music</H1>
+                <GlitchingTitle padding="22px 0 20px 0">
+                  <H2>Mood Music</H2>
+                  <H2>Mood Music</H2>
+                  <H2>Mood Music</H2>
+                  <H2>Mood Music</H2>
                 </GlitchingTitle>
 
                 <article>
@@ -79,21 +78,16 @@ const Projects = () => {
                   </Row>
                 </article>
               </div>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://moodmusic.today/"
-              >
-                <Image
-                  src="/images/tortoise-mobile.png"
-                  alt="tortoise"
-                  width={600}
-                  height={600}
-                  layout="intrinsic"
-                  quality={50}
-                  priority
-                />
-              </a>
+
+              <Image
+                src="/images/tortoise-mobile.png"
+                alt="tortoise"
+                width={600}
+                height={600}
+                layout="intrinsic"
+                quality={50}
+                priority
+              />
             </BorderlessCard>
           </Row>
           <Row center id="interplanetarytravel">
@@ -106,12 +100,12 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle margin="2px auto 20px auto">
-                  <H1>Interplanetary</H1>
-                  <H1>Interplanetary</H1>
-                  <H1>Interplanetary</H1>
-                  <H1 />
-                  <H1>Travel</H1>
+                <GlitchingTitle padding="22px 0 20px 0">
+                  <H2>Interplanetary</H2>
+                  <H2>Interplanetary</H2>
+                  <H2>Interplanetary</H2>
+                  <H2 />
+                  <H2>Travel</H2>
                 </GlitchingTitle>
 
                 <article>
@@ -151,21 +145,15 @@ const Projects = () => {
                   </Row>
                 </article>
               </div>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://interplanetarytravel.space/"
-              >
-                <Image
-                  src="/images/rocket-mobile.png"
-                  alt="rocket"
-                  width={600}
-                  height={600}
-                  layout="intrinsic"
-                  quality={50}
-                  priority
-                />
-              </a>
+              <Image
+                src="/images/rocket-mobile.png"
+                alt="rocket"
+                width={600}
+                height={600}
+                layout="intrinsic"
+                quality={50}
+                priority
+              />
             </BorderlessCard>
           </Row>
           <Row center id="workingtitle">
@@ -177,11 +165,11 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle margin="2px auto 20px auto">
-                  <H1>Working Title</H1>
-                  <H1>Working Title</H1>
-                  <H1>Working Title</H1>
-                  <H1>Working Title</H1>
+                <GlitchingTitle padding="2px 0 20px 0">
+                  <H2>Working Title</H2>
+                  <H2>Working Title</H2>
+                  <H2>Working Title</H2>
+                  <H2>Working Title</H2>
                 </GlitchingTitle>
 
                 <article>
@@ -223,28 +211,22 @@ const Projects = () => {
                   </Row>
                 </article>
               </div>
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://github.com/mi544/working-title"
-              >
-                <Image
-                  src="/images/wt.png"
-                  alt="working title"
-                  width={600}
-                  height={600}
-                  layout="intrinsic"
-                  quality={50}
-                  priority
-                />
-              </a>
+              <Image
+                src="/images/wt.png"
+                alt="working title"
+                width={600}
+                height={600}
+                layout="intrinsic"
+                quality={50}
+                priority
+              />
             </BorderlessCard>
           </Row>
         </Main>
         <Footer />
       </Container>
     </IconContext.Provider>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

@@ -1,16 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-
-import {
-  Header,
-  Main,
-  Container,
-  Footer,
-  Row,
-  BorderlessCard,
-  GlitchingTitle,
-  H1
-} from "components";
+import Head from 'next/head'
+import { Main, Container, Row, H1 } from '@S'
+import { Header, Footer } from '@C'
 
 const Resources = () => {
   return (
@@ -28,7 +18,7 @@ const Resources = () => {
         <Footer />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Resources;
+export default Resources

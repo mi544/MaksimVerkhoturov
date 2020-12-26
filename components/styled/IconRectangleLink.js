@@ -16,6 +16,7 @@ const IconRectangleLink = styled.a`
   /* & > *:nth-child(1) {
     padding-right: 10px;
   } */
+
   & > *:nth-child(2) {
     margin-bottom: 0.2rem;
     margin-right: 0.1rem;

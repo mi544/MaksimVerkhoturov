@@ -8,7 +8,6 @@ import {
   Row,
   H2,
   H3,
-  H4,
   Align,
   HighlightText,
   P,
@@ -93,7 +92,7 @@ const About = () => {
               </div>
               <div>
                 <Align align="left" margin="0 10% auto 10%" marginW="0 10% auto 15%">
-                  <H2>&ensp;&ensp;I know:</H2>
+                  <H2 margin="0 0 0.5rem 0">I know:</H2>
 
                   <H3 line="60px">
                     <HighlightText delay="-4s">Python</HighlightText>
@@ -110,23 +109,22 @@ const About = () => {
                   <H3 line="60px">
                     <HighlightText delay="-1s">React, Redux, Next.js</HighlightText>
                   </H3>
-
-                  <H4 line="40px">
+                  <H3 line="60px">
                     <HighlightText noAnimate>React Native, Expo.io</HighlightText>
-                  </H4>
-                  <H3 line="50px">
+                  </H3>
+                  <H3 line="60px">
                     <HighlightText noAnimate>Express</HighlightText>
                   </H3>
-                  <H3 line="50px">
+                  <H3 line="60px">
                     <HighlightText delay="-8s">Mocha, Chai, Jest, Selenium</HighlightText>
                   </H3>
-                  <H3 line="50px">
+                  <H3 line="60px">
                     <HighlightText delay="-5s">MySQL, Sequelize</HighlightText>
                   </H3>
-                  <H3 line="50px">
+                  <H3 line="60px">
                     <HighlightText delay="-5s">MongoDB, Mongoose</HighlightText>
                   </H3>
-                  <H3 line="50px">
+                  <H3 line="60px">
                     <HighlightText noAnimate>Git</HighlightText>
                   </H3>
                 </Align>

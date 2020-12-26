@@ -20,7 +20,7 @@ const Home = () => {
               padding="5%"
               appearDuration={1.4}
             >
-              <H2>Software developer</H2>
+              <H2 margin="0 0 1rem 0">Software developer</H2>
               <section>
                 <H3>Hello! I develop apps.</H3>
                 <Button width="100%" height="75px">
@@ -37,7 +37,7 @@ const Home = () => {
               margin="auto 0 auto auto"
               appearDuration={2}
             >
-              <H2>Projects</H2>
+              <H2 margin="0 0 1rem 0">Projects</H2>
               <section>
                 <H3>Take a look at the projects I&apos;ve worked on</H3>
                 <Row
@@ -91,7 +91,7 @@ const Home = () => {
               height={['45vh', '45vh', '60vh']}
               appearDuration={2.7}
             >
-              <H2>Contact me</H2>
+              <H2 margin="0 0 1rem 0">Contact me</H2>
               <H3>sd32@pm.me</H3>
             </Card>
           </Row>

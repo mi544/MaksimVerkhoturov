@@ -4,7 +4,7 @@ const IconRectangleLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 20%;
   min-width: fit-content;
   padding: 1.5%;
   padding-left: 0.8rem;
@@ -17,10 +17,16 @@ const IconRectangleLink = styled.a`
     padding-right: 10px;
   } */
   & > *:nth-child(2) {
-    /* margin: auto 0 0 auto; */
     margin-bottom: 0.2rem;
     margin-right: 0.1rem;
     align-self: flex-end;
+  }
+
+  @media (min-width: 870px) {
+    width: 25%;
+  }
+  @media (min-width: 1215px) {
+    width: 30%;
   }
 `
 

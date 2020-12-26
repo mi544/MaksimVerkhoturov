@@ -10,6 +10,12 @@ const H5 = styled.h5`
         `
       : ''}
   ${(p) =>
+    p.padding
+      ? css`
+          padding: ${p.padding};
+        `
+      : ''}
+  ${(p) =>
     p.center
       ? css`
           text-align: center;

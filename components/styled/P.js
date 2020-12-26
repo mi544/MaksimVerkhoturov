@@ -38,6 +38,12 @@ const P = styled.p`
           margin-bottom: ${p.marginBottom};
         `
       : ''}
+  ${(p) =>
+    p.padding
+      ? css`
+          padding: ${p.padding};
+        `
+      : ''}
 `
 
 export { P }

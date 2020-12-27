@@ -8,6 +8,8 @@ const Home = () => {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Portfolio - Main Page" />
+        <meta property="og:url" content="https://mi544.dev/" />
         <title>Main Page</title>
       </Head>
       <Container>

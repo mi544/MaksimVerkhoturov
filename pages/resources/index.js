@@ -6,6 +6,8 @@ const Resources = () => {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Portfolio - Resources" />
+        <meta property="og:url" content="https://mi544.dev/resources/" />
         <title>Resources</title>
       </Head>
       <Container>

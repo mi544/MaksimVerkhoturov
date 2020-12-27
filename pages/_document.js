@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/images/favicon512.png" />
-          <meta property="og:image" content="/images/thumbnail.png" />
+          <meta property="og:image" content="https://mi544.dev/images/thumbnail.png" />
           <meta property="og:description" content="Welcome to my portfolio" />
           <meta property="og:type" content="website" />
         </Head>

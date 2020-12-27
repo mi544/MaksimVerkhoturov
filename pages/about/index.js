@@ -20,6 +20,8 @@ const About = () => {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Portfolio - About" />
+        <meta property="og:url" content="https://mi544.dev/about/" />
         <title>About</title>
       </Head>
       <Container>

@@ -23,6 +23,8 @@ const Projects = () => {
   return (
     <IconContext.Provider value={{ size: '75px', color: 'white' }}>
       <Head>
+        <meta property="og:title" content="Portfolio - Projects" />
+        <meta property="og:url" content="https://mi544.dev/projects/" />
         <title>Projects</title>
       </Head>
       <Container>

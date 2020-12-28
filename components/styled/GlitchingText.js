@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // accepts only 4 h tags for now
-const GlitchingTitle = styled.div`
+const GlitchingText = styled.div`
   padding: ${(p) => (p.padding ? p.padding : 0)};
 
   & > * {
@@ -31,4 +31,4 @@ const GlitchingTitle = styled.div`
   }
 `
 
-export { GlitchingTitle }
+export { GlitchingText }

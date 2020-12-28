@@ -5,19 +5,9 @@ import { VscGithubAlt } from 'react-icons/vsc'
 import { FaPager } from 'react-icons/fa'
 import { SiExpo } from 'react-icons/si'
 
-import {
-  Main,
-  Container,
-  BorderlessCard,
-  GlitchingTitle,
-  Row,
-  H2,
-  IconRectangleLink,
-  P,
-  H5
-} from '@S'
+import { Main, Container, BorderlessCard, Row, P, H5 } from '@S'
 
-import { Header, Footer } from '@C'
+import { Header, Footer, GlitchingTitle, ProjectIcons } from '@C'
 
 const Projects = () => {
   return (
@@ -39,13 +29,7 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle padding="22px 0 20px 0">
-                  <H2>Mood Music</H2>
-                  <H2>Mood Music</H2>
-                  <H2>Mood Music</H2>
-                  <H2>Mood Music</H2>
-                </GlitchingTitle>
-
+                <GlitchingTitle>Mood Music</GlitchingTitle>
                 <article>
                   <P border>
                     <H5 padding="0 0 1rem 0" center>
@@ -60,24 +44,7 @@ const Projects = () => {
                     in a list along with a video and lyrics. The app is strictly
                     client-side.
                   </P>
-                  <Row margin="1.5rem 0" justify="space-evenly">
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://github.com/mi544/mood-music"
-                    >
-                      <VscGithubAlt />
-                      <p>Github</p>
-                    </IconRectangleLink>
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://moodmusic.today/"
-                    >
-                      <FaPager />
-                      <p>Open</p>
-                    </IconRectangleLink>
-                  </Row>
+                  <ProjectIcons icon1={<VscGithubAlt />} icon2={<FaPager />} />
                 </article>
               </div>
               <div>
@@ -103,14 +70,7 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle padding="22px 0 20px 0">
-                  <H2>Interplanetary</H2>
-                  <H2>Interplanetary</H2>
-                  <H2>Interplanetary</H2>
-                  <H2 />
-                  <H2>Travel</H2>
-                </GlitchingTitle>
-
+                <GlitchingTitle final="Travel">Interplanetary</GlitchingTitle>
                 <article>
                   <P border>
                     <H5 padding="0 0 1rem 0" center>
@@ -128,24 +88,7 @@ const Projects = () => {
                     </div>
                     <div>&emsp;Deployed to a Debian 10 Digital Ocean VPS.</div>
                   </P>
-                  <Row margin="2rem 0" justify="space-evenly">
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://github.com/mi544/interplanetary-travel-planner"
-                    >
-                      <VscGithubAlt />
-                      <p>Github</p>
-                    </IconRectangleLink>
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://interplanetarytravel.space/"
-                    >
-                      <FaPager />
-                      <p>Open</p>
-                    </IconRectangleLink>
-                  </Row>
+                  <ProjectIcons icon1={<VscGithubAlt />} icon2={<FaPager />} />
                 </article>
               </div>
               <div>
@@ -170,13 +113,7 @@ const Projects = () => {
               margin="30px auto auto auto"
             >
               <div>
-                <GlitchingTitle padding="2px 0 20px 0">
-                  <H2>Working Title</H2>
-                  <H2>Working Title</H2>
-                  <H2>Working Title</H2>
-                  <H2>Working Title</H2>
-                </GlitchingTitle>
-
+                <GlitchingTitle>Working Title</GlitchingTitle>
                 <article>
                   <P border>
                     <H5 padding="0 0 1rem 0" center>
@@ -196,24 +133,7 @@ const Projects = () => {
                       &emsp;Deployed to Expo.io and a Debian 10 Digital Ocean VPS.
                     </div>
                   </P>
-                  <Row margin="2rem 0" justify="space-evenly">
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://github.com/mi544/working-title"
-                    >
-                      <VscGithubAlt />
-                      <p>Github</p>
-                    </IconRectangleLink>
-                    <IconRectangleLink
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href="https://expo.io/@mi544/projects/working-title"
-                    >
-                      <SiExpo />
-                      <p>Open</p>
-                    </IconRectangleLink>
-                  </Row>
+                  <ProjectIcons icon1={<VscGithubAlt />} icon2={<SiExpo />} />
                 </article>
               </div>
               <div>

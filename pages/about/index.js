@@ -103,7 +103,7 @@ const About = () => {
                     <HighlightText delay="-3s">JavaScript</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-2s">HTML, CSS</HighlightText>
+                    <HighlightText delay="-2s">HTML, CSS, SASS</HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText delay="-3s">Node.js</HighlightText>

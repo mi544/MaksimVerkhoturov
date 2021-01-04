@@ -116,7 +116,7 @@ const Projects = () => {
                     <H5 padding="0 0 1rem 0" center>
                       Technologies used:
                     </H5>
-                    <div>Node.js, HTML, CSS, JavaScript</div>
+                    <div>HTML, SASS, Node.js, JavaScript</div>
                     <div>Express, Handlebars, Passport</div>
                     <div>MySQL, Sequelize</div>
                     <div>Mocha, Chai + ESLint + Coveralls - TravisCI</div>

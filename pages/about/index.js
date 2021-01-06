@@ -121,7 +121,9 @@ const About = () => {
                     <HighlightText delay="-8s">Mocha, Chai, Jest, Selenium</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-5s">MySQL, Sequelize</HighlightText>
+                    <HighlightText delay="-5s">
+                      MySQL, PostgreSQL, Sequelize
+                    </HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText delay="-5s">MongoDB, Mongoose</HighlightText>

@@ -1,4 +1,4 @@
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components'
 
 const appear = keyframes`
   from {
@@ -8,6 +8,6 @@ const appear = keyframes`
     opacity: 1;
     transform: translateY(0);
   }
-`;
+`
 
-export { appear };
+export { appear }

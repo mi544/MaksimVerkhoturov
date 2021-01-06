@@ -1,21 +1,13 @@
-import Head from "next/head";
-import Image from "next/image";
-
-import {
-  Header,
-  Main,
-  Container,
-  Footer,
-  Row,
-  BorderlessCard,
-  GlitchingTitle,
-  H1
-} from "components";
+import Head from 'next/head'
+import { Main, Container, Row, H1 } from '@S'
+import { Header, Footer } from '@C'
 
 const Resources = () => {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Portfolio - Resources" />
+        <meta property="og:url" content="https://mi544.dev/resources/" />
         <title>Resources</title>
       </Head>
       <Container>
@@ -28,7 +20,7 @@ const Resources = () => {
         <Footer />
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default Resources;
+export default Resources

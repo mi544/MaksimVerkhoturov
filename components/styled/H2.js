@@ -1,21 +1,21 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 const H2 = styled.h2`
   font-size: 1.7em;
-  line-height: ${p => (p.line ? p.line : "normal")};
-  ${p =>
+  line-height: ${(p) => (p.line ? p.line : 'normal')};
+  ${(p) =>
     p.margin
       ? css`
           margin: ${p.margin};
         `
-      : ""}
+      : ''}
 
   @media (min-width: 870px) {
     font-size: 2em;
   }
   @media (min-width: 1215px) {
-    font-size: 2.5em;
+    font-size: 2.8em;
   }
-`;
+`
 
-export { H2 };
+export { H2 }

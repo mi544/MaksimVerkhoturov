@@ -1,25 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Header,
-  Footer,
-  Main,
-  Card,
-  H1,
-  H2,
-  H3,
-  H4,
-  Row,
-  Container,
-  Button,
-  StyledLink
-} from "components";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Main, Card, H2, H3, Row, Container, Button, StyledLink } from '@S'
+import { Header, Footer } from '@C'
 
 const Home = () => {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Portfolio - Main Page" />
+        <meta property="og:url" content="https://mi544.dev/" />
         <title>Main Page</title>
       </Head>
       <Container>
@@ -27,12 +17,12 @@ const Home = () => {
         <Main>
           <Row margin="7vh auto auto 6%">
             <Card
-              width={["80%", "60%", "40%"]}
-              height={["35vh", "35vh", "35vh"]}
+              width={['80%', '60%', '40%']}
+              height={['35vh', '35vh', '35vh']}
               padding="5%"
               appearDuration={1.4}
             >
-              <H2>Software developer</H2>
+              <H2 margin="0 0 1rem 0">Software developer</H2>
               <section>
                 <H3>Hello! I develop apps.</H3>
                 <Button width="100%" height="75px">
@@ -43,15 +33,15 @@ const Home = () => {
           </Row>
           <Row margin="10vh 10% auto 6%">
             <Card
-              width={["85%", "65%", "60%"]}
-              height={["36vh", "45vh", "50vh"]}
+              width={['85%', '65%', '60%']}
+              height={['36vh', '45vh', '50vh']}
               padding="5%"
               margin="auto 0 auto auto"
               appearDuration={2}
             >
-              <H2>Projects</H2>
+              <H2 margin="0 0 1rem 0">Projects</H2>
               <section>
-                <H3>Take a look at the projects I've worked on</H3>
+                <H3>Take a look at the projects I&apos;ve worked on</H3>
                 <Row
                   margin="50px 0 10px 0"
                   individualMargin="0 10px 0 10px"
@@ -99,11 +89,11 @@ const Home = () => {
           </Row>
           <Row margin="10vh 2% auto 6%">
             <Card
-              width={["90%", "75%", "60%"]}
-              height={["45vh", "45vh", "60vh"]}
+              width={['90%', '75%', '60%']}
+              height={['45vh', '45vh', '60vh']}
               appearDuration={2.7}
             >
-              <H2>Contact me</H2>
+              <H2 margin="0 0 1rem 0">Contact me</H2>
               <H3>sd32@pm.me</H3>
             </Card>
           </Row>
@@ -111,6 +101,6 @@ const Home = () => {
         <Footer />
       </Container>
     </>
-  );
-};
-export default Home;
+  )
+}
+export default Home

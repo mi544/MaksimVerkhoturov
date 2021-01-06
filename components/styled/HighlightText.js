@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css } from 'styled-components'
 
 const colorChange = keyframes`
   0% {
@@ -12,20 +12,20 @@ const colorChange = keyframes`
   100% {
     text-shadow: -4px 2px #272727;
   }
-`;
+`
 
 // accepts only 4 h tags for now
 const HighlightText = styled.span`
-  margin: ${p => (p.margin ? p.margin : "auto")};
+  margin: ${(p) => (p.margin ? p.margin : 'auto')};
 
   text-shadow: -4px 2px #272727;
-  ${p =>
+  ${(p) =>
     p.noAnimate
-      ? ""
+      ? ''
       : css`
-          animation: ${colorChange} 10s ${p.delay ? p.delay : ""} infinite
+          animation: ${colorChange} 10s ${p.delay ? p.delay : ''} infinite
             cubic-bezier(0, 0.38, 1, 0.08);
         `}
-`;
+`
 
-export { HighlightText };
+export { HighlightText }

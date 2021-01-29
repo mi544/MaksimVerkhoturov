@@ -100,13 +100,16 @@ const About = () => {
                     <HighlightText delay="-4s">Python</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-3s">JavaScript</HighlightText>
+                    <HighlightText delay="-3.5s">Node.js/Express</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-2s">HTML, CSS, SASS</HighlightText>
+                    <HighlightText delay="-2.5s">PHP/Laravel</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-3s">Node.js</HighlightText>
+                    <HighlightText delay="-2s">HTML5, CSS3, SASS</HighlightText>
+                  </H3>
+                  <H3 line="60px">
+                    <HighlightText delay="-1s">Vue, Vuex, Nuxt.js</HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText delay="-1s">React, Redux, Next.js</HighlightText>
@@ -115,18 +118,13 @@ const About = () => {
                     <HighlightText noAnimate>React Native, Expo.io</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText noAnimate>Express</HighlightText>
+                    <HighlightText delay="-8s">Mocha, Jest, Selenium</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-8s">Mocha, Chai, Jest, Selenium</HighlightText>
+                    <HighlightText delay="-5s">MySQL, PostgreSQL</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-5s">
-                      MySQL, PostgreSQL, Sequelize
-                    </HighlightText>
-                  </H3>
-                  <H3 line="60px">
-                    <HighlightText delay="-5s">MongoDB, Mongoose</HighlightText>
+                    <HighlightText delay="-5s">MongoDB</HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText noAnimate>Git</HighlightText>

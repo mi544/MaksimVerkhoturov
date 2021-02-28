@@ -47,6 +47,18 @@ const Home = () => {
                   individualMargin="0 10px 0 10px"
                   justify="center"
                 >
+                  <Link href="/projects#hotsprings" passHref>
+                    <StyledLink aria-label="Hot Springs Simulator Project">
+                      <Image
+                        src="/images/hot-springs-bw.png"
+                        alt="hot springs icon"
+                        width={100}
+                        height={100}
+                        layout="intrinsic"
+                        quality={50}
+                      />
+                    </StyledLink>
+                  </Link>
                   <Link href="/projects#moodmusic" passHref>
                     <StyledLink aria-label="Mood Music Project">
                       <Image

@@ -208,11 +208,12 @@ const Header = () => {
               <NavLink>Projects</NavLink>
             </Link>
           </NavBarItem>
-          <NavBarItem active={router.pathname === '/resources'}>
+          {/*  temporarily off */
+          /* <NavBarItem active={router.pathname === '/resources'}>
             <Link href="/resources" passHref>
               <NavLink>Resources</NavLink>
             </Link>
-          </NavBarItem>
+          </NavBarItem> */}
         </NavBarWrapper>
       </NavBar>
       <MenuButton

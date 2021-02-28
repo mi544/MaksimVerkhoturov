@@ -45,8 +45,8 @@ const About = () => {
                     web development. I enjoy working on both front end and back end.
                   </P>
                   <P>
-                    &ensp;&ensp;Excited to be building apps and creating experiences.
-                    Let&apos;s work together!
+                    &ensp;&ensp;Excited to build apps and create experiences. Let&apos;s
+                    work together!
                   </P>
                 </article>
               </div>
@@ -97,13 +97,9 @@ const About = () => {
                   <H2 margin="0 0 0.5rem 0">I know:</H2>
 
                   <H3 line="60px">
-                    <HighlightText delay="-4s">Python</HighlightText>
-                  </H3>
-                  <H3 line="60px">
-                    <HighlightText delay="-3.5s">Node.js/Express</HighlightText>
-                  </H3>
-                  <H3 line="60px">
-                    <HighlightText delay="-2.5s">PHP/Laravel</HighlightText>
+                    <HighlightText delay="-4s">
+                      Python, Node.js/Express, PHP/Laravel
+                    </HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText delay="-2s">HTML5, CSS3, SASS</HighlightText>
@@ -118,7 +114,9 @@ const About = () => {
                     <HighlightText noAnimate>React Native, Expo.io</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText delay="-8s">Mocha, Jest, Selenium</HighlightText>
+                    <HighlightText delay="-8s">
+                      Jest, Vue Test Utils, Mocha/Chai
+                    </HighlightText>
                   </H3>
                   <H3 line="60px">
                     <HighlightText delay="-5s">MySQL, PostgreSQL</HighlightText>
@@ -127,7 +125,12 @@ const About = () => {
                     <HighlightText delay="-5s">MongoDB</HighlightText>
                   </H3>
                   <H3 line="60px">
-                    <HighlightText noAnimate>Git</HighlightText>
+                    <HighlightText noAnimate>Git, GitLab, Jira</HighlightText>
+                  </H3>
+                  <H3 line="60px">
+                    <HighlightText noAnimate>
+                      Docker, DigitalOcean, AWS EC2, Nginx
+                    </HighlightText>
                   </H3>
                 </Align>
               </div>

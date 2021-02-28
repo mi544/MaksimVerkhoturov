@@ -30,6 +30,78 @@ const Projects = () => {
       <Container>
         <Header />
         <Main>
+          <Row center id="hotsprings">
+            <BorderlessCard
+              appearDuration={1}
+              delayDuration={0.1}
+              textDelayDuration={0.2}
+              width="90%"
+              reversed
+              margin="30px auto auto auto"
+            >
+              <div>
+                <GlitchingTitle padding="22px 0 20px 0">
+                  <H2>Hot Springs</H2>
+                  <H2>Hot Springs</H2>
+                  <H2>Hot Springs</H2>
+                  <H2 />
+                  <H2>Simulator</H2>
+                </GlitchingTitle>
+
+                <article>
+                  <P border>
+                    <H5 padding="0 0 1rem 0" center>
+                      Technologies used:
+                    </H5>
+                    <div>Vue.js, Nuxt.js, Vuex</div>
+                    <div>Tailwind CSS</div>
+                    <div>Node.js, Express</div>
+                    <div>Jest, Vue Test Utils</div>
+                  </P>
+                  <P padding="1.5rem 0 1rem 0">
+                    <div>
+                      A full-stack (mostly front-end) web app for creating hot springs
+                      surrounded by rocks. Utilizes Vuex store extensively to incorporate
+                      grid logic, show errors, and control the flow.
+                    </div>
+                    <div>
+                      &emsp;Deployed to an AWS EC2 instance with Nginx set up in reverse
+                      proxy mode and PM2 for consistent uptime.
+                    </div>
+                  </P>
+                  <Row margin="2rem 0" justify="space-evenly">
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://github.com/mi544/hot-springs"
+                    >
+                      <VscGithubAlt />
+                      <p>Github</p>
+                    </IconRectangleLink>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://hot-springs.personal-projects.space/"
+                    >
+                      <FaPager />
+                      <p>Open</p>
+                    </IconRectangleLink>
+                  </Row>
+                </article>
+              </div>
+              <div>
+                <Image
+                  src="/images/hot-springs.png"
+                  alt="rocket"
+                  width={600}
+                  height={600}
+                  layout="intrinsic"
+                  quality={50}
+                  priority
+                />
+              </div>
+            </BorderlessCard>
+          </Row>
           <Row center id="moodmusic">
             <BorderlessCard
               appearDuration={1}

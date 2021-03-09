@@ -11,6 +11,7 @@ import {
   BorderlessCard,
   GlitchingTitle,
   Row,
+  ButtonsContainer,
   H2,
   IconRectangleLink,
   P,
@@ -30,6 +31,80 @@ const Projects = () => {
       <Container>
         <Header />
         <Main>
+          <Row center id="simpleweather">
+            <BorderlessCard
+              appearDuration={1}
+              delayDuration={0.1}
+              textDelayDuration={0.2}
+              width="90%"
+              margin="30px auto auto auto"
+            >
+              <div>
+                <GlitchingTitle padding="22px 0 20px 0">
+                  <H2>Simple Weather</H2>
+                  <H2>Simple Weather</H2>
+                  <H2>Simple Weather</H2>
+                </GlitchingTitle>
+
+                <article>
+                  <P border>
+                    <H5 padding="0 0 1rem 0" center>
+                      Technologies used:
+                    </H5>
+                    <div>Vue.js, Vuex, Chart.js</div>
+                    <div>Node.js, Express</div>
+                    <div>NWS, OpenCage APIs</div>
+                  </P>
+                  <P padding="1.5rem 0 1rem 0">
+                    <div>
+                      A clean, simple weather app to give information clearly and quickly.
+                      Inspired by{' '}
+                      <a
+                        href="https://ddg.gg/weather%20in%20Denver"
+                        style={{ color: '#e8ef64' }}
+                      >
+                        DuckDuckGo&apos;s
+                      </a>{' '}
+                      implementation of their weather widget.
+                    </div>
+                    <div>
+                      &emsp;Searches for weather in any US city, displaying it along with
+                      an informative temperatures chart.
+                    </div>
+                  </P>
+                  <ButtonsContainer>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://github.com/bry-an/simple-weather"
+                    >
+                      <VscGithubAlt />
+                      <p>Github</p>
+                    </IconRectangleLink>
+                    <IconRectangleLink
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href="https://rainybysun.tokyo/"
+                    >
+                      <FaPager />
+                      <p>Open</p>
+                    </IconRectangleLink>
+                  </ButtonsContainer>
+                </article>
+              </div>
+              <div>
+                <Image
+                  src="/images/simple-weather.png"
+                  alt="simple weather logo"
+                  width={600}
+                  height={600}
+                  layout="intrinsic"
+                  quality={50}
+                  priority
+                />
+              </div>
+            </BorderlessCard>
+          </Row>
           <Row center id="hotsprings">
             <BorderlessCard
               appearDuration={1}
@@ -69,7 +144,7 @@ const Projects = () => {
                       proxy mode and PM2 for consistent uptime.
                     </div>
                   </P>
-                  <Row margin="2rem 0" justify="space-evenly">
+                  <ButtonsContainer>
                     <IconRectangleLink
                       target="_blank"
                       rel="noreferrer noopener"
@@ -86,7 +161,7 @@ const Projects = () => {
                       <FaPager />
                       <p>Open</p>
                     </IconRectangleLink>
-                  </Row>
+                  </ButtonsContainer>
                 </article>
               </div>
               <div>
@@ -132,7 +207,7 @@ const Projects = () => {
                     in a list along with a video and lyrics. The app is strictly
                     client-side.
                   </P>
-                  <Row margin="1.5rem 0" justify="space-evenly">
+                  <ButtonsContainer>
                     <IconRectangleLink
                       target="_blank"
                       rel="noreferrer noopener"
@@ -149,7 +224,7 @@ const Projects = () => {
                       <FaPager />
                       <p>Open</p>
                     </IconRectangleLink>
-                  </Row>
+                  </ButtonsContainer>
                 </article>
               </div>
               <div>
@@ -200,7 +275,7 @@ const Projects = () => {
                     </div>
                     <div>&emsp;Deployed to a Debian 10 Digital Ocean VPS.</div>
                   </P>
-                  <Row margin="2rem 0" justify="space-evenly">
+                  <ButtonsContainer>
                     <IconRectangleLink
                       target="_blank"
                       rel="noreferrer noopener"
@@ -217,7 +292,7 @@ const Projects = () => {
                       <FaPager />
                       <p>Open</p>
                     </IconRectangleLink>
-                  </Row>
+                  </ButtonsContainer>
                 </article>
               </div>
               <div>
@@ -268,7 +343,7 @@ const Projects = () => {
                       &emsp;Deployed to Expo.io and a Debian 10 Digital Ocean VPS.
                     </div>
                   </P>
-                  <Row margin="2rem 0" justify="space-evenly">
+                  <ButtonsContainer>
                     <IconRectangleLink
                       target="_blank"
                       rel="noreferrer noopener"
@@ -285,7 +360,7 @@ const Projects = () => {
                       <SiExpo />
                       <p>Open</p>
                     </IconRectangleLink>
-                  </Row>
+                  </ButtonsContainer>
                 </article>
               </div>
               <div>
